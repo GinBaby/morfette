@@ -1,0 +1,851 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-31 18:03:49.226098 UTC
+
+interface main@main:GramLab.Data.Diff.EditTree 7103
+  interface hash: ed4d1846d30228e60451ebeac249cc4b
+  ABI hash: 32c2bc25976fa0aca2f55b66b3c335be
+  export-list hash: 95c4855628dddd927e04f73f2d849d1f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 7d87cd20ce1a88403f3d490f357b2b08
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  GramLab.Data.Diff.EditTree.apply
+  GramLab.Data.Diff.EditTree.check
+  GramLab.Data.Diff.EditTree.make
+  GramLab.Data.Diff.EditTree.split3
+  GramLab.Data.Diff.EditTree.EditTree{GramLab.Data.Diff.EditTree.Replace GramLab.Data.Diff.EditTree.Split}
+module dependencies: GramLab.Data.StringLike
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 utf8-string-0.3@utf8s_Evdgh7PUHf0DzUKk7aDqth
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.Function 6b13a8d3a5e3bd757a91434dce3fc7f3
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.Maybe 1cb58de2b04ee3c0c0a7dc9201184aff
+import  -/  base-4.8.2.0:Data.OldList d8fd80b0e14aa085ce6219cd89dad356
+import  -/  base-4.8.2.0:Debug.Trace 6660afb6094d69397ea084364da8f950
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Read b423b4506a014855edbd329b567629f3
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:GHC.Word 10dc88543d98000abab9695a1019767d
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:Text.ParserCombinators.ReadPrec 2590e0e0a57a86ac7c62727f4d868dd2
+import  -/  base-4.8.2.0:Text.Read.Lex 724ca44ddd38ddc5f47a501d62736c26
+import  -/  binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary 9841191a00783282c8287750f587d3bd
+import  -/  binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Class 5cdaebca453f1684b7859ccd4d3c9665
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  GramLab.Data.StringLike 94ddc44a7f9a370e73b45ef95697cbcf
+  exports: 298e1b4c76516d41437d6aa1211151fc
+  append c7515359764db34ea99cc09864e0e63f
+  length d40c285e4d82d6311d5816842143de53
+  reverse 397ce9ddd092f70f2ca71d1bffad4805
+  splitAt 8ed465a69574c107facf4a7f49ea4144
+36dcd608428799bfe6b241505305700b
+  $fBinaryEditTree ::
+    Data.Binary.Class.Binary s =>
+    Data.Binary.Class.Binary (GramLab.Data.Diff.EditTree.EditTree s a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(C(U(U,U)),U)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s @ a $dBinary :: Data.Binary.Class.Binary s.
+                  @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                  (GramLab.Data.Diff.EditTree.$fBinaryEditTree_$cput
+                     @ s
+                     @ a
+                     $dBinary)
+                  (GramLab.Data.Diff.EditTree.$fBinaryEditTree_$cget
+                     @ s
+                     @ a
+                     $dBinary) -}
+36dcd608428799bfe6b241505305700b
+  $fBinaryEditTree1 ::
+    Data.Binary.Class.Binary s =>
+    forall r.
+    Data.ByteString.Internal.ByteString
+    -> Data.Binary.Get.Internal.Success
+         (GramLab.Data.Diff.EditTree.EditTree s a) r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 3, Strictness: <L,U(A,U)><S,1*U(U,U,U,U)><L,C(C1(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   w :: Data.Binary.Class.Binary s
+                   @ r
+                   w1 :: Data.ByteString.Internal.ByteString
+                   w2 :: Data.Binary.Get.Internal.Success
+                           (GramLab.Data.Diff.EditTree.EditTree s a) r ->
+                 case w1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 GramLab.Data.Diff.EditTree.$wa
+                   @ s
+                   @ a
+                   w
+                   @ r
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   w2 }) -}
+36dcd608428799bfe6b241505305700b
+  $fBinaryEditTree_$cget ::
+    Data.Binary.Class.Binary s =>
+    Data.Binary.Get.Internal.Get
+      (GramLab.Data.Diff.EditTree.EditTree s a)
+  {- Arity: 3, Strictness: <L,U(A,U)><S,1*U(U,U,U,U)><L,C(C1(U))>,
+     Unfolding: InlineRule (0, True, True)
+                GramLab.Data.Diff.EditTree.$fBinaryEditTree1
+                  `cast`
+                (forall s a.
+                 <Data.Binary.Class.Binary s>_R
+                 ->_R Sym (Data.Binary.Get.Internal.NTCo:Get[0]
+                               <GramLab.Data.Diff.EditTree.EditTree s a>_R)) -}
+36dcd608428799bfe6b241505305700b
+  $fBinaryEditTree_$cput ::
+    Data.Binary.Class.Binary s =>
+    GramLab.Data.Diff.EditTree.EditTree s a -> Data.Binary.Put.Put
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(C(U(U,U)),A)><S,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ a
+                   w :: Data.Binary.Class.Binary s
+                   w1 :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 case GramLab.Data.Diff.EditTree.$w$cput
+                        @ s
+                        @ a
+                        w
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 (Data.Binary.Put.PairS @ () ww1 ww2)
+                   `cast`
+                 (Sym (Data.Binary.Put.NTCo:PutM[0]) <()>_N) }) -}
+36dcd608428799bfe6b241505305700b
+  $fEqEditTree ::
+    GHC.Classes.Eq s =>
+    GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+  DFunId[0]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s @ a $dEq :: GHC.Classes.Eq s.
+                  @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                  (GramLab.Data.Diff.EditTree.$fEqEditTree_$c== @ s @ a $dEq)
+                  (GramLab.Data.Diff.EditTree.$fEqEditTree_$c/= @ s @ a $dEq) -}
+36dcd608428799bfe6b241505305700b
+  $fEqEditTree_$c/= ::
+    GHC.Classes.Eq s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   $dEq :: GHC.Classes.Eq s
+                   a1 :: GramLab.Data.Diff.EditTree.EditTree s a
+                   b :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 case GramLab.Data.Diff.EditTree.$fEqEditTree_$c==
+                        @ s
+                        @ a
+                        $dEq
+                        a1
+                        b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+36dcd608428799bfe6b241505305700b
+  $fEqEditTree_$c== ::
+    GHC.Classes.Eq s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U> -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GHC.Classes.Ord (GramLab.Data.Diff.EditTree.EditTree s a)
+  DFunId[1]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U><L,U(A,C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s
+                      @ a
+                      $dEq :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                      $dOrd :: GHC.Classes.Ord s.
+                  @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                  $dEq
+                  (GramLab.Data.Diff.EditTree.$fOrdEditTree_$ccompare
+                     @ s
+                     @ a
+                     $dEq
+                     $dOrd)
+                  (GramLab.Data.Diff.EditTree.$fOrdEditTree_$c< @ s @ a $dEq $dOrd)
+                  (GramLab.Data.Diff.EditTree.$fOrdEditTree_$c<= @ s @ a $dEq $dOrd)
+                  (GramLab.Data.Diff.EditTree.$fOrdEditTree_$c> @ s @ a $dEq $dOrd)
+                  (GramLab.Data.Diff.EditTree.$fOrdEditTree_$c>= @ s @ a $dEq $dOrd)
+                  (GramLab.Data.Diff.EditTree.$fOrdEditTree_$cmax @ s @ a $dEq $dOrd)
+                  (GramLab.Data.Diff.EditTree.$fOrdEditTree_$cmin
+                     @ s
+                     @ a
+                     $dEq
+                     $dOrd) -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree_$c< ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,C(C1(U)),C(C1(U)),A,A,A,A,A)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ s
+                   @ a
+                   w :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                   w1 :: GHC.Classes.Ord s
+                   w2 :: GramLab.Data.Diff.EditTree.EditTree s a
+                   w3 :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 GramLab.Data.Diff.EditTree.$w$c< @ s @ a w1 w2 w3) -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree_$c<= ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ s
+                   @ a
+                   w :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                   w1 :: GHC.Classes.Ord s
+                   w2 :: GramLab.Data.Diff.EditTree.EditTree s a
+                   w3 :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 GramLab.Data.Diff.EditTree.$w$c<= @ s @ a w1 w2 w3) -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree_$c> ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,C(C1(U)),A,A,C(C1(U)),A,A,A)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ s
+                   @ a
+                   w :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                   w1 :: GHC.Classes.Ord s
+                   w2 :: GramLab.Data.Diff.EditTree.EditTree s a
+                   w3 :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 GramLab.Data.Diff.EditTree.$w$c> @ s @ a w1 w2 w3) -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree_$c>= ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ s
+                   @ a
+                   w :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                   w1 :: GHC.Classes.Ord s
+                   w2 :: GramLab.Data.Diff.EditTree.EditTree s a
+                   w3 :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 GramLab.Data.Diff.EditTree.$w$c>= @ s @ a w1 w2 w3) -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree_$ccompare ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Ordering
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,C(C1(U)),A,A,A,A,A,A)><S,1*U><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, True)
+                (\ @ s
+                   @ a
+                   w :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                   w1 :: GHC.Classes.Ord s
+                   w2 :: GramLab.Data.Diff.EditTree.EditTree s a
+                   w3 :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 GramLab.Data.Diff.EditTree.$w$ccompare @ s @ a w1 w2 w3) -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree_$cmax ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,C(C1(U)),A,C(C1(U)),A,A,A,A)><S,U><S,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ s
+                   @ a
+                   $dEq :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                   $dOrd :: GHC.Classes.Ord s
+                   x :: GramLab.Data.Diff.EditTree.EditTree s a
+                   y :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 case GramLab.Data.Diff.EditTree.$fOrdEditTree_$c<=
+                        @ s
+                        @ a
+                        $dEq
+                        $dOrd
+                        x
+                        y of wild {
+                   GHC.Types.False -> x GHC.Types.True -> y }) -}
+36dcd608428799bfe6b241505305700b
+  $fOrdEditTree_$cmin ::
+    (GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a),
+     GHC.Classes.Ord s) =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,C(C1(U)),A,C(C1(U)),A,A,A,A)><S,U><S,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ @ s
+                   @ a
+                   $dEq :: GHC.Classes.Eq (GramLab.Data.Diff.EditTree.EditTree s a)
+                   $dOrd :: GHC.Classes.Ord s
+                   x :: GramLab.Data.Diff.EditTree.EditTree s a
+                   y :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 case GramLab.Data.Diff.EditTree.$fOrdEditTree_$c<=
+                        @ s
+                        @ a
+                        $dEq
+                        $dOrd
+                        x
+                        y of wild {
+                   GHC.Types.False -> y GHC.Types.True -> x }) -}
+36dcd608428799bfe6b241505305700b
+  $fReadEditTree ::
+    GHC.Read.Read s =>
+    GHC.Read.Read (GramLab.Data.Diff.EditTree.EditTree s a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s @ a $dRead :: GHC.Read.Read s.
+                  @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                  (GramLab.Data.Diff.EditTree.$fReadEditTree_$creadsPrec
+                     @ s
+                     @ a
+                     $dRead)
+                  (GramLab.Data.Diff.EditTree.$fReadEditTree_$creadList
+                     @ s
+                     @ a
+                     $dRead)
+                  (GramLab.Data.Diff.EditTree.$fReadEditTree_$creadPrec
+                     @ s
+                     @ a
+                     $dRead)
+                  (GramLab.Data.Diff.EditTree.$fReadEditTree_$creadListPrec
+                     @ s
+                     @ a
+                     $dRead) -}
+36dcd608428799bfe6b241505305700b
+  $fReadEditTree1 ::
+    GHC.Read.Read s =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       ([GramLab.Data.Diff.EditTree.EditTree s a]
+        -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   $dRead :: GHC.Read.Read s
+                   eta :: Text.ParserCombinators.ReadPrec.Prec
+                   @ b
+                   eta1 :: [GramLab.Data.Diff.EditTree.EditTree s a]
+                           -> Text.ParserCombinators.ReadP.P b ->
+                 GHC.Read.$wa
+                   @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                   (GramLab.Data.Diff.EditTree.$fReadEditTree2 @ s @ a $dRead)
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                             <GramLab.Data.Diff.EditTree.EditTree s a>_R))
+                   @ b
+                   eta1) -}
+36dcd608428799bfe6b241505305700b
+  $fReadEditTree2 ::
+    GHC.Read.Read s =>
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP
+         (GramLab.Data.Diff.EditTree.EditTree s a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U> -}
+36dcd608428799bfe6b241505305700b
+  $fReadEditTree_$creadList ::
+    GHC.Read.Read s =>
+    Text.ParserCombinators.ReadP.ReadS
+      [GramLab.Data.Diff.EditTree.EditTree s a]
+  {- Arity: 1, Strictness: <L,U(A,A,U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ s @ a $dRead :: GHC.Read.Read s ->
+                 Text.ParserCombinators.ReadP.run
+                   @ [GramLab.Data.Diff.EditTree.EditTree s a]
+                   (GHC.Read.$wa
+                      @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                      (GramLab.Data.Diff.EditTree.$fReadEditTree2 @ s @ a $dRead)
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                <GramLab.Data.Diff.EditTree.EditTree s a>_R))
+                      @ [GramLab.Data.Diff.EditTree.EditTree s a]
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ [GramLab.Data.Diff.EditTree.EditTree s a]))) -}
+36dcd608428799bfe6b241505305700b
+  $fReadEditTree_$creadListPrec ::
+    GHC.Read.Read s =>
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      [GramLab.Data.Diff.EditTree.EditTree s a]
+  {- Arity: 3, Strictness: <L,U(A,A,U,A)><L,A><L,C(U)>,
+     Unfolding: InlineRule (0, True, True)
+                GramLab.Data.Diff.EditTree.$fReadEditTree1
+                  `cast`
+                (forall s a.
+                 <GHC.Read.Read s>_R
+                 ->_R Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                                         <[GramLab.Data.Diff.EditTree.EditTree s a]>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                                    <[GramLab.Data.Diff.EditTree.EditTree s a]>_R))) -}
+36dcd608428799bfe6b241505305700b
+  $fReadEditTree_$creadPrec ::
+    GHC.Read.Read s =>
+    Text.ParserCombinators.ReadPrec.ReadPrec
+      (GramLab.Data.Diff.EditTree.EditTree s a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                GramLab.Data.Diff.EditTree.$fReadEditTree2
+                  `cast`
+                (forall s a.
+                 <GHC.Read.Read s>_R
+                 ->_R Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                               <GramLab.Data.Diff.EditTree.EditTree s a>_R)) -}
+36dcd608428799bfe6b241505305700b
+  $fReadEditTree_$creadsPrec ::
+    GHC.Read.Read s =>
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS
+         (GramLab.Data.Diff.EditTree.EditTree s a)
+  {- Arity: 2, Strictness: <L,U(A,A,U,A)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s @ a $dRead :: GHC.Read.Read s eta :: GHC.Types.Int ->
+                 Text.ParserCombinators.ReadP.run
+                   @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                   ((GramLab.Data.Diff.EditTree.$fReadEditTree2 @ s @ a $dRead eta)
+                      `cast`
+                    (Text.ParserCombinators.ReadP.NTCo:ReadP[0]
+                         <GramLab.Data.Diff.EditTree.EditTree s a>_R)
+                      @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                         @ (GramLab.Data.Diff.EditTree.EditTree s a)))) -}
+36dcd608428799bfe6b241505305700b
+  $fShowEditTree ::
+    GHC.Show.Show s =>
+    GHC.Show.Show (GramLab.Data.Diff.EditTree.EditTree s a)
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ s @ a $dShow :: GHC.Show.Show s.
+                  @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                  (GramLab.Data.Diff.EditTree.$fShowEditTree_$cshowsPrec
+                     @ s
+                     @ a
+                     $dShow)
+                  (GramLab.Data.Diff.EditTree.$fShowEditTree_$cshow @ s @ a $dShow)
+                  (GramLab.Data.Diff.EditTree.$fShowEditTree_$cshowList
+                     @ s
+                     @ a
+                     $dShow) -}
+0520ccc8f42792e613946acb815bd2fc
+  $fShowEditTree1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+36dcd608428799bfe6b241505305700b
+  $fShowEditTree_$cshow ::
+    GHC.Show.Show s =>
+    GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U(C(C1(U)),A,A)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ s
+                   @ a
+                   $dShow :: GHC.Show.Show s
+                   x :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 GramLab.Data.Diff.EditTree.$fShowEditTree_$cshowsPrec
+                   @ s
+                   @ a
+                   $dShow
+                   GHC.Show.shows18
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+36dcd608428799bfe6b241505305700b
+  $fShowEditTree_$cshowList ::
+    GHC.Show.Show s =>
+    [GramLab.Data.Diff.EditTree.EditTree s a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   $dShow :: GHC.Show.Show s
+                   eta :: [GramLab.Data.Diff.EditTree.EditTree s a]
+                   eta1 :: GHC.Base.String ->
+                 GHC.Show.showList__
+                   @ (GramLab.Data.Diff.EditTree.EditTree s a)
+                   (GramLab.Data.Diff.EditTree.$fShowEditTree_$cshowsPrec
+                      @ s
+                      @ a
+                      $dShow
+                      GramLab.Data.Diff.EditTree.$fShowEditTree1)
+                   eta
+                   eta1) -}
+36dcd608428799bfe6b241505305700b
+  $fShowEditTree_$cshowsPrec ::
+    GHC.Show.Show s =>
+    GHC.Types.Int
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U(U)><S,1*U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   @ a
+                   w :: GHC.Show.Show s
+                   w1 :: GHC.Types.Int
+                   w2 :: GramLab.Data.Diff.EditTree.EditTree s a ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 GramLab.Data.Diff.EditTree.$w$cshowsPrec @ s @ a w ww1 w2 }) -}
+36dcd608428799bfe6b241505305700b
+  $w$c< ::
+    GHC.Classes.Ord s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),C(C1(U)),A,A,A,A,A)><S,1*U><S,1*U>,
+     Inline: [0] -}
+36dcd608428799bfe6b241505305700b
+  $w$c<= ::
+    GHC.Classes.Ord s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,C(C1(U)),A,A,A,A)><S,1*U><S,1*U>,
+     Inline: [0] -}
+36dcd608428799bfe6b241505305700b
+  $w$c> ::
+    GHC.Classes.Ord s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,C(C1(U)),A,A,A)><S,1*U><S,1*U>,
+     Inline: [0] -}
+36dcd608428799bfe6b241505305700b
+  $w$c>= ::
+    GHC.Classes.Ord s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,C(C1(U)),A,A)><S,1*U><S,1*U>,
+     Inline: [0] -}
+36dcd608428799bfe6b241505305700b
+  $w$ccompare ::
+    GHC.Classes.Ord s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Types.Ordering
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A,A)><S,1*U><S,1*U>,
+     Inline: [0] -}
+36dcd608428799bfe6b241505305700b
+  $w$cput ::
+    Data.Binary.Class.Binary s =>
+    GramLab.Data.Diff.EditTree.EditTree s a
+    -> (# (), Data.Binary.Builder.Base.Builder #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(C(U(U,U)),A)><S,1*U>,
+     Inline: [0] -}
+36dcd608428799bfe6b241505305700b
+  $w$cshowsPrec ::
+    GHC.Show.Show s =>
+    GHC.Prim.Int#
+    -> GramLab.Data.Diff.EditTree.EditTree s a -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><L,U><S,1*U>,
+     Inline: [0] -}
+36dcd608428799bfe6b241505305700b
+  $wa ::
+    Data.Binary.Class.Binary s =>
+    forall r.
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Binary.Get.Internal.Success
+         (GramLab.Data.Diff.EditTree.EditTree s a) r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 6,
+     Strictness: <L,U(A,U)><L,U><L,U><L,U><L,U><L,C(C1(U))>,
+     Inline: [0] -}
+e84cd3c25b8a6b6663f004b7e2e09113
+  $wsplit3 ::
+    GramLab.Data.StringLike.StringLike t a =>
+    t -> GHC.Types.Int -> GHC.Types.Int -> (# t, t, t #)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,A,A,A,A,A,C(C1(U(U,U))),C(U),A,A,A,A)><L,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ t
+                   @ a
+                   w :: GramLab.Data.StringLike.StringLike t a
+                   w1 :: t
+                   w2 :: GHC.Types.Int
+                   w3 :: GHC.Types.Int ->
+                 let {
+                   $wds :: forall a1.
+                           GramLab.Data.StringLike.StringLike t a1 =>
+                           (# t, t #)
+                     {- Arity: 1,
+                        Strictness: <L,U(A,A,A,A,A,A,A,A,C(C1(U(U,U))),1*C1(U),A,A,A,A)>,
+                        Inline: [0] -}
+                   = \ @ a1 w4 :: GramLab.Data.StringLike.StringLike t a1 ->
+                     let {
+                       ds :: (t, t)
+                       = GramLab.Data.StringLike.splitAt
+                           @ t
+                           @ a1
+                           w4
+                           w3
+                           (GramLab.Data.StringLike.reverse
+                              @ t
+                              @ a1
+                              w4
+                              (case GramLab.Data.StringLike.splitAt
+                                      @ t
+                                      @ a1
+                                      w4
+                                      w2
+                                      w1 of wild { (,) prefix rest ->
+                               rest }))
+                     } in
+                     (# case ds of wild { (,) suffix_r root_r -> suffix_r },
+                        case ds of wild { (,) suffix_r root_r -> root_r } #)
+                 } in
+                 (# case GramLab.Data.StringLike.splitAt
+                           @ t
+                           @ a
+                           w
+                           w2
+                           w1 of wild { (,) prefix rest ->
+                    prefix },
+                    GramLab.Data.StringLike.reverse
+                      @ t
+                      @ a
+                      w
+                      (case $wds @ a w of ww { (#,#) ww1 ww2 -> ww2 }),
+                    GramLab.Data.StringLike.reverse
+                      @ t
+                      @ a
+                      w
+                      (case $wds @ a w of ww { (#,#) ww1 ww2 -> ww1 }) #)) -}
+36dcd608428799bfe6b241505305700b
+  type role EditTree representational phantom
+  data EditTree s a
+    = Split {-# UNPACK #-}GHC.Types.Int
+            {-# UNPACK #-}GHC.Types.Int
+            (GramLab.Data.Diff.EditTree.EditTree s a)
+            (GramLab.Data.Diff.EditTree.EditTree s a)
+    | Replace s s
+82ef804508c7cdc401631dc05cb0fb83
+  apply ::
+    GramLab.Data.StringLike.StringLike t a =>
+    GramLab.Data.Diff.EditTree.EditTree t t1 -> t -> t
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,A,A,A,A,A,C(C1(U(U,U))),C(U),C(C1(U)),A,A,A)><S,1*U><L,U>,
+     Unfolding: (\ @ t
+                   @ t1
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike t a
+                   eta :: GramLab.Data.Diff.EditTree.EditTree t t1
+                   eta1 :: t ->
+                 letrec {
+                   apply1 :: GramLab.Data.Diff.EditTree.EditTree t t1 -> t -> t
+                     {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                   = \ ds :: GramLab.Data.Diff.EditTree.EditTree t t1 w :: t ->
+                     case ds of wild {
+                       GramLab.Data.Diff.EditTree.Split dt dt1 lt rt
+                       -> let {
+                            i :: GHC.Types.Int {- Strictness: m -} = GHC.Types.I# dt
+                          } in
+                          let {
+                            i_end :: GHC.Types.Int {- Strictness: m -} = GHC.Types.I# dt1
+                          } in
+                          GramLab.Data.StringLike.append
+                            @ t
+                            @ a
+                            $dStringLike
+                            (GramLab.Data.StringLike.append
+                               @ t
+                               @ a
+                               $dStringLike
+                               (apply1
+                                  lt
+                                  (case GramLab.Data.Diff.EditTree.$wsplit3
+                                          @ t
+                                          @ a
+                                          $dStringLike
+                                          w
+                                          i
+                                          i_end of ww { (#,,#) ww1 ww2 ww3 ->
+                                   ww1 }))
+                               (case GramLab.Data.Diff.EditTree.$wsplit3
+                                       @ t
+                                       @ a
+                                       $dStringLike
+                                       w
+                                       i
+                                       i_end of ww { (#,,#) ww1 ww2 ww3 ->
+                                ww2 }))
+                            (apply1
+                               rt
+                               (case GramLab.Data.Diff.EditTree.$wsplit3
+                                       @ t
+                                       @ a
+                                       $dStringLike
+                                       w
+                                       i
+                                       i_end of ww { (#,,#) ww1 ww2 ww3 ->
+                                ww3 }))
+                       GramLab.Data.Diff.EditTree.Replace s s' -> s' }
+                 } in
+                 apply1 eta eta1) -}
+ddbc7e38c63fb04cd26ba99b7dddaed9
+  check ::
+    (GHC.Classes.Eq a, GramLab.Data.StringLike.StringLike a a1) =>
+    GramLab.Data.Diff.EditTree.EditTree a t -> a -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><L,U(A,A,C(U(U)),A,A,A,A,A,C(C1(U(U,U))),C(U),A,A,A,A)><S,1*U><L,U>,
+     Unfolding: (\ @ t
+                   @ a
+                   @ a1
+                   $dEq :: GHC.Classes.Eq a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike a a1
+                   eta :: GramLab.Data.Diff.EditTree.EditTree a t
+                   eta1 :: a ->
+                 letrec {
+                   check1 :: GramLab.Data.Diff.EditTree.EditTree a t
+                             -> a -> GHC.Types.Bool
+                     {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                   = \ ds :: GramLab.Data.Diff.EditTree.EditTree a t w :: a ->
+                     case ds of wild {
+                       GramLab.Data.Diff.EditTree.Split dt dt1 lt rt
+                       -> case GramLab.Data.StringLike.length
+                                 @ a
+                                 @ a1
+                                 $dStringLike
+                                 w of wild1 { GHC.Types.I# x ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.>=# x dt) of wild2 {
+                            GHC.Types.False -> GHC.Types.False
+                            GHC.Types.True
+                            -> case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.>=# x dt1) of wild3 {
+                                 GHC.Types.False -> GHC.Types.False
+                                 GHC.Types.True
+                                 -> let {
+                                      i :: GHC.Types.Int {- Strictness: m -} = GHC.Types.I# dt
+                                    } in
+                                    let {
+                                      j :: GHC.Types.Int {- Strictness: m -} = GHC.Types.I# dt1
+                                    } in
+                                    case check1
+                                           lt
+                                           (case GramLab.Data.Diff.EditTree.$wsplit3
+                                                   @ a
+                                                   @ a1
+                                                   $dStringLike
+                                                   w
+                                                   i
+                                                   j of ww { (#,,#) ww1 ww2 ww3 ->
+                                            ww1 }) of wild4 {
+                                      GHC.Types.False -> GHC.Types.False
+                                      GHC.Types.True
+                                      -> check1
+                                           rt
+                                           (case GramLab.Data.Diff.EditTree.$wsplit3
+                                                   @ a
+                                                   @ a1
+                                                   $dStringLike
+                                                   w
+                                                   i
+                                                   j of ww { (#,,#) ww1 ww2 ww3 ->
+                                            ww3 }) } } } }
+                       GramLab.Data.Diff.EditTree.Replace s s'
+                       -> GHC.Classes.== @ a $dEq s w }
+                 } in
+                 check1 eta eta1) -}
+9918d21fca5cd14b2f5523928948c137
+  make ::
+    GHC.Classes.Eq a =>
+    [a] -> [a] -> GramLab.Data.Diff.EditTree.EditTree [a] a1
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A)><L,U><L,U> -}
+93105b168c7e4c7b65398789f4e37e97
+  split3 ::
+    GramLab.Data.StringLike.StringLike t a =>
+    t -> GHC.Types.Int -> GHC.Types.Int -> (t, t, t)
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,A,A,A,A,A,A,A,C(C1(U(U,U))),C(U),A,A,A,A)><L,U><L,U><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ t
+                   @ a
+                   w :: GramLab.Data.StringLike.StringLike t a
+                   w1 :: t
+                   w2 :: GHC.Types.Int
+                   w3 :: GHC.Types.Int ->
+                 case GramLab.Data.Diff.EditTree.$wsplit3
+                        @ t
+                        @ a
+                        w
+                        w1
+                        w2
+                        w3 of ww { (#,,#) ww1 ww2 ww3 ->
+                 (ww1, ww2, ww3) }) -}
+instance Data.Binary.Class.Binary [GramLab.Data.Diff.EditTree.EditTree]
+  = GramLab.Data.Diff.EditTree.$fBinaryEditTree
+instance GHC.Classes.Eq [GramLab.Data.Diff.EditTree.EditTree]
+  = GramLab.Data.Diff.EditTree.$fEqEditTree
+instance GHC.Classes.Ord [GramLab.Data.Diff.EditTree.EditTree]
+  = GramLab.Data.Diff.EditTree.$fOrdEditTree
+instance GHC.Read.Read [GramLab.Data.Diff.EditTree.EditTree]
+  = GramLab.Data.Diff.EditTree.$fReadEditTree
+instance GHC.Show.Show [GramLab.Data.Diff.EditTree.EditTree]
+  = GramLab.Data.Diff.EditTree.$fShowEditTree
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

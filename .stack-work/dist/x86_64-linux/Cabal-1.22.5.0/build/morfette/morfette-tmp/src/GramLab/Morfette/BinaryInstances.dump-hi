@@ -1,0 +1,200 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-31 18:03:48.30008 UTC
+
+interface main@main:GramLab.Morfette.BinaryInstances [orphan module] 7103
+  interface hash: 0c6aa68864548d38f549d9ed7018aae7
+  ABI hash: 611d83e149c8201d3d890f73028247be
+  export-list hash: 0aa924c689a5f73cb240fb3a666da7e6
+  orphan hash: b4ebbc17da57a5f224b878ba51a56715
+  flag hash: 02dfbb5f8fa675c9482bf4d67113798e
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+import  -/  base-4.8.2.0:Control.Monad 480c5067477275068c9b98be08410df9
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary 9841191a00783282c8287750f587d3bd
+import  -/  binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Class 5cdaebca453f1684b7859ccd4d3c9665
+import  -/  vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed fa9b7782497a9e5abba24f1202c4c9b3
+import  -/  vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base 40784c3eb50afb0c5d5cbf08f57e10c3
+a0feffd65b87baa6786af1a677deaeb2
+  $fBinaryVector ::
+    (Data.Vector.Unboxed.Base.Unbox a, Data.Binary.Class.Binary a) =>
+    Data.Binary.Class.Binary (Data.Vector.Unboxed.Base.Vector a)
+  DFunId[0]
+  {- Arity: 2, Strictness: <L,U(U,A)><L,U(U,C(C1(U)))>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      $dUnbox :: Data.Vector.Unboxed.Base.Unbox a
+                      $dBinary :: Data.Binary.Class.Binary a.
+                  @ (Data.Vector.Unboxed.Base.Vector a)
+                  (GramLab.Morfette.BinaryInstances.$fBinaryVector_$cput
+                     @ a
+                     $dUnbox
+                     $dBinary)
+                  (GramLab.Morfette.BinaryInstances.$fBinaryVector_$cget
+                     @ a
+                     $dUnbox
+                     $dBinary) -}
+8806c64542f1061e1a576c9fc3da6ea4
+  $fBinaryVector1 ::
+    (Data.Vector.Unboxed.Base.Unbox a, Data.Binary.Class.Binary a) =>
+    forall r.
+    Data.ByteString.Internal.ByteString
+    -> Data.Binary.Get.Internal.Success
+         (Data.Vector.Unboxed.Base.Vector a) r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 4,
+     Strictness: <L,U(U,A)><L,U(A,C(C1(U)))><S,1*U(U,U,U,U)><L,C(C1(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (4, True, False)
+                (\ @ a
+                   w :: Data.Vector.Unboxed.Base.Unbox a
+                   w1 :: Data.Binary.Class.Binary a
+                   @ r
+                   w2 :: Data.ByteString.Internal.ByteString
+                   w3 :: Data.Binary.Get.Internal.Success
+                           (Data.Vector.Unboxed.Base.Vector a) r ->
+                 case w2 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 GramLab.Morfette.BinaryInstances.$wa
+                   @ a
+                   w
+                   w1
+                   @ r
+                   ww1
+                   ww2
+                   ww3
+                   ww4
+                   w3 }) -}
+4128340f44ea89284b105de4672aeb86
+  $fBinaryVector_$cget ::
+    (Data.Vector.Unboxed.Base.Unbox a, Data.Binary.Class.Binary a) =>
+    Data.Binary.Get.Internal.Get (Data.Vector.Unboxed.Base.Vector a)
+  {- Arity: 4,
+     Strictness: <L,U(U,A)><L,U(A,C(C1(U)))><S,1*U(U,U,U,U)><L,C(C1(U))>,
+     Unfolding: InlineRule (0, True, True)
+                GramLab.Morfette.BinaryInstances.$fBinaryVector1
+                  `cast`
+                (forall a.
+                 <Data.Vector.Unboxed.Base.Unbox a>_R
+                 ->_R <Data.Binary.Class.Binary a>_R
+                 ->_R Sym (Data.Binary.Get.Internal.NTCo:Get[0]
+                               <Data.Vector.Unboxed.Base.Vector a>_R)) -}
+bbd1ff27ab5c6da6f0982ec3aaa97143
+  $fBinaryVector_$cput ::
+    (Data.Vector.Unboxed.Base.Unbox a, Data.Binary.Class.Binary a) =>
+    Data.Vector.Unboxed.Base.Vector a -> Data.Binary.Put.Put
+  {- Arity: 3, Strictness: <L,1*U(1*U,A)><L,1*U(1*U,A)><L,1*U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   w :: Data.Vector.Unboxed.Base.Unbox a
+                   w1 :: Data.Binary.Class.Binary a
+                   w2 :: Data.Vector.Unboxed.Base.Vector a ->
+                 case GramLab.Morfette.BinaryInstances.$w$cput
+                        @ a
+                        w
+                        w1
+                        w2 of ww { (#,#) ww1 ww2 ->
+                 (Data.Binary.Put.PairS @ () ww1 ww2)
+                   `cast`
+                 (Sym (Data.Binary.Put.NTCo:PutM[0]) <()>_N) }) -}
+5874265cfe7542e016c74aae9f6e4d17
+  $w$cput ::
+    (Data.Vector.Unboxed.Base.Unbox a, Data.Binary.Class.Binary a) =>
+    Data.Vector.Unboxed.Base.Vector a
+    -> (# (), Data.Binary.Builder.Base.Builder #)
+  {- Arity: 3, Strictness: <L,1*U(1*U,A)><L,1*U(1*U,A)><L,1*U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   w :: Data.Vector.Unboxed.Base.Unbox a
+                   w1 :: Data.Binary.Class.Binary a
+                   w2 :: Data.Vector.Unboxed.Base.Vector a ->
+                 Data.Binary.Class.$w$cput26
+                   @ a
+                   w1
+                   (case w2 of v2 { DEFAULT ->
+                    let {
+                      $dVector :: Data.Vector.Generic.Base.Vector
+                                    Data.Vector.Unboxed.Base.Vector a
+                      = Data.Vector.Unboxed.Base.$p1Unbox @ a w
+                    } in
+                    case Data.Vector.Generic.Base.basicLength
+                           @ Data.Vector.Unboxed.Base.Vector
+                           @ a
+                           $dVector
+                           v2 of n1 { GHC.Types.I# ipv ->
+                    letrec {
+                      $wgo :: GHC.Prim.Int# -> [a]
+                        {- Arity: 1, Strictness: <L,U>, Inline: [0] -}
+                      = \ ww :: GHC.Prim.Int# ->
+                        case GHC.Prim.tagToEnum#
+                               @ GHC.Types.Bool
+                               (GHC.Prim.>=# ww ipv) of wild2 {
+                          GHC.Types.False
+                          -> case Data.Vector.Generic.Base.basicUnsafeIndexM
+                                    @ Data.Vector.Unboxed.Base.Vector
+                                    @ a
+                                    $dVector
+                                    @ Data.Vector.Fusion.Util.Box
+                                    Data.Vector.Fusion.Util.$fMonadBox
+                                    v2
+                                    (GHC.Types.I# ww) of wild3 { Data.Vector.Fusion.Util.Box x1 ->
+                             GHC.Types.: @ a x1 ($wgo (GHC.Prim.+# ww 1)) }
+                          GHC.Types.True -> GHC.Types.[] @ a }
+                    } in
+                    $wgo 0 } })) -}
+a6ffbe0debb0bd791d2ca34a7c079b4f
+  $wa ::
+    (Data.Vector.Unboxed.Base.Unbox a, Data.Binary.Class.Binary a) =>
+    forall r.
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Binary.Get.Internal.Success
+         (Data.Vector.Unboxed.Base.Vector a) r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 7,
+     Strictness: <L,U(U,A)><L,U(A,C(C1(U)))><L,U><L,U><L,U><L,U><L,C(C1(U))>,
+     Inline: [0] -}
+instance Data.Binary.Class.Binary [Data.Vector.Unboxed.Base.Vector]
+  = GramLab.Morfette.BinaryInstances.$fBinaryVector
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

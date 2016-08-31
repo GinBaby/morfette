@@ -1,0 +1,251 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-31 18:03:48.789761 UTC
+
+interface main@main:GramLab.Data.Assoc 7103
+  interface hash: b509399b94e719f1172dea9f0bc78c5c
+  ABI hash: 2cd498090fd31705b06689fbe30f872a
+  export-list hash: 7c5bb8bdbcb21934b4775b9a541c4a76
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: e3a07a88a4eac6e213a88f9459e8b324
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  GramLab.Data.Assoc.Assoc{GramLab.Data.Assoc.fromAssoc}
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0* containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap b12766c110eeb4fd2fee2c7193beb535
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base 80996740a0d7122170d006b3b922d0a0
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map 1800ccac43fd924c376b60eac12f4d04
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base 61f4bf9a28a6b2eb8805b671ced219c1
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+88d8f207c4be867686755dd789e0b398
+  $dmfromAssoc ::
+    GramLab.Data.Assoc.Assoc assoc k v =>
+    forall assoc2.
+    GramLab.Data.Assoc.Assoc assoc2 k v =>
+    assoc -> assoc2
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,1*U(A,1*C1(U),A,A)><S(LLC(S)L),1*U(A,A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ assoc
+                   @ k
+                   @ v
+                   $dAssoc :: GramLab.Data.Assoc.Assoc assoc k v
+                   @ assoc2
+                   $dAssoc1 :: GramLab.Data.Assoc.Assoc assoc2 k v
+                   eta :: assoc ->
+                 GramLab.Data.Assoc.fromList
+                   @ assoc2
+                   @ k
+                   @ v
+                   $dAssoc1
+                   (GramLab.Data.Assoc.toList @ assoc @ k @ v $dAssoc eta)) -}
+24b53cb12827055b3cf2f7fa4c54efe8
+  $fAssocIntMapIntv ::
+    GHC.Classes.Ord GHC.Types.Int =>
+    GramLab.Data.Assoc.Assoc
+      (Data.IntMap.Base.IntMap v) GHC.Types.Int v
+  DFunId[1]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ v $dOrd :: GHC.Classes.Ord GHC.Types.Int.
+                  @ (Data.IntMap.Base.IntMap v)
+                  @ GHC.Types.Int
+                  @ v
+                  $dOrd
+                  (GramLab.Data.Assoc.$fAssocIntMapIntv_$ctoList @ v $dOrd)
+                  (GramLab.Data.Assoc.$fAssocIntMapIntv_$cfromList @ v $dOrd)
+                  (GramLab.Data.Assoc.$fAssocIntMapIntv_$cfromAssoc @ v $dOrd) -}
+24b53cb12827055b3cf2f7fa4c54efe8
+  $fAssocIntMapIntv_$cfromAssoc ::
+    GHC.Classes.Ord GHC.Types.Int =>
+    forall assoc2.
+    GramLab.Data.Assoc.Assoc assoc2 GHC.Types.Int v =>
+    Data.IntMap.Base.IntMap v -> assoc2
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><S(LLC(S)L),1*U(A,A,1*C1(U),A)><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ v
+                   $dOrd :: GHC.Classes.Ord GHC.Types.Int
+                   @ assoc2
+                   $dAssoc :: GramLab.Data.Assoc.Assoc assoc2 GHC.Types.Int v
+                   eta :: Data.IntMap.Base.IntMap v ->
+                 GramLab.Data.Assoc.fromList
+                   @ assoc2
+                   @ GHC.Types.Int
+                   @ v
+                   $dAssoc
+                   (GHC.Base.build
+                      @ (Data.IntSet.Base.Key, v)
+                      (\ @ b
+                         c :: (Data.IntSet.Base.Key, v) -> b -> b[OneShot]
+                         n :: b[OneShot] ->
+                       Data.IntMap.Base.foldrFB
+                         @ v
+                         @ b
+                         (\ k :: Data.IntSet.Base.Key x :: v[OneShot] xs :: b[OneShot] ->
+                          c (k, x) xs)
+                         n
+                         eta))) -}
+8190f442a4fd90669aa9bafee989d8a4
+  $fAssocIntMapIntv_$cfromList ::
+    GHC.Classes.Ord GHC.Types.Int =>
+    [(GHC.Types.Int, v)] -> Data.IntMap.Base.IntMap v
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ v
+                   $dOrd :: GHC.Classes.Ord GHC.Types.Int
+                   eta :: [(Data.IntSet.Base.Key, v)] ->
+                 Data.IntMap.Base.fromList @ v eta) -}
+464bce597268a08b513093968acbc1c6
+  $fAssocIntMapIntv_$ctoList ::
+    GHC.Classes.Ord GHC.Types.Int =>
+    Data.IntMap.Base.IntMap v -> [(GHC.Types.Int, v)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ v
+                   $dOrd :: GHC.Classes.Ord GHC.Types.Int
+                   eta :: Data.IntMap.Base.IntMap v ->
+                 GHC.Base.build
+                   @ (Data.IntSet.Base.Key, v)
+                   (\ @ b
+                      c :: (Data.IntSet.Base.Key, v) -> b -> b[OneShot]
+                      n :: b[OneShot] ->
+                    Data.IntMap.Base.foldrFB
+                      @ v
+                      @ b
+                      (\ k :: Data.IntSet.Base.Key x :: v[OneShot] xs :: b[OneShot] ->
+                       c (k, x) xs)
+                      n
+                      eta)) -}
+24b53cb12827055b3cf2f7fa4c54efe8
+  $fAssocMapkv ::
+    GHC.Classes.Ord k =>
+    GramLab.Data.Assoc.Assoc (Data.Map.Base.Map k v) k v
+  DFunId[0]
+  {- Arity: 1, Strictness: <L,U(U,U,U,U,U,U,U,U)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k @ v $dOrd :: GHC.Classes.Ord k.
+                  @ (Data.Map.Base.Map k v)
+                  @ k
+                  @ v
+                  $dOrd
+                  (GramLab.Data.Assoc.$fAssocMapkv_$ctoList @ k @ v $dOrd)
+                  (Data.Map.Base.fromList @ k @ v $dOrd)
+                  (GramLab.Data.Assoc.$fAssocMapkv_$cfromAssoc @ k @ v $dOrd) -}
+24b53cb12827055b3cf2f7fa4c54efe8
+  $fAssocMapkv_$cfromAssoc ::
+    GHC.Classes.Ord k =>
+    forall assoc2.
+    GramLab.Data.Assoc.Assoc assoc2 k v =>
+    Data.Map.Base.Map k v -> assoc2
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><S(LLC(S)L),1*U(A,A,1*C1(U),A)><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ k
+                   @ v
+                   $dOrd :: GHC.Classes.Ord k
+                   @ assoc2
+                   $dAssoc :: GramLab.Data.Assoc.Assoc assoc2 k v
+                   eta :: Data.Map.Base.Map k v ->
+                 GramLab.Data.Assoc.fromList
+                   @ assoc2
+                   @ k
+                   @ v
+                   $dAssoc
+                   (Data.Map.Base.$fEqMap1 @ k @ v (GHC.Types.[] @ (k, v)) eta)) -}
+1a3ec4512307c389bcce4c09cddb2e4f
+  $fAssocMapkv_$ctoList ::
+    GHC.Classes.Ord k => Data.Map.Base.Map k v -> [(k, v)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ k
+                   @ v
+                   $dOrd :: GHC.Classes.Ord k
+                   eta :: Data.Map.Base.Map k v ->
+                 GHC.Base.build
+                   @ (k, v)
+                   (\ @ b c :: (k, v) -> b -> b[OneShot] n :: b[OneShot] ->
+                    Data.Map.Base.foldrFB
+                      @ k
+                      @ v
+                      @ b
+                      (\ k1 :: k x :: v[OneShot] xs :: b[OneShot] -> c (k1, x) xs)
+                      n
+                      eta)) -}
+24b53cb12827055b3cf2f7fa4c54efe8
+  $fAssoc[]kv ::
+    GHC.Classes.Ord k => GramLab.Data.Assoc.Assoc [(k, v)] k v
+  DFunId[0]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ k @ v $dOrd :: GHC.Classes.Ord k.
+                  @ [(k, v)]
+                  @ k
+                  @ v
+                  $dOrd
+                  (GramLab.Data.Assoc.$fAssoc[]kv_$cfromList @ k @ v $dOrd)
+                  (GramLab.Data.Assoc.$fAssoc[]kv_$cfromList @ k @ v $dOrd)
+                  (GramLab.Data.Assoc.$fAssoc[]kv_$cfromAssoc @ k @ v $dOrd) -}
+24b53cb12827055b3cf2f7fa4c54efe8
+  $fAssoc[]kv_$cfromAssoc ::
+    GHC.Classes.Ord k =>
+    forall assoc2.
+    GramLab.Data.Assoc.Assoc assoc2 k v =>
+    [(k, v)] -> assoc2
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><S(LLC(S)L),1*U(A,A,1*C1(U),A)><L,U>,
+     Unfolding: InlineRule (3, True, True)
+                (\ @ k
+                   @ v
+                   $dOrd :: GHC.Classes.Ord k
+                   @ assoc2
+                   $dAssoc :: GramLab.Data.Assoc.Assoc assoc2 k v
+                   eta :: [(k, v)] ->
+                 GramLab.Data.Assoc.fromList @ assoc2 @ k @ v $dAssoc eta) -}
+38cf04964846344d3714d547771a9b8d
+  $fAssoc[]kv_$cfromList :: GHC.Classes.Ord k => [(k, v)] -> [(k, v)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ @ k @ v $dOrd :: GHC.Classes.Ord k eta :: [(k, v)] ->
+                 GHC.Base.id @ [(k, v)] eta) -}
+24b53cb12827055b3cf2f7fa4c54efe8
+  class GHC.Classes.Ord k => Assoc assoc k v | assoc -> k v where
+    toList :: assoc -> [(k, v)]
+    fromList :: [(k, v)] -> assoc
+    fromAssoc {- Has default method -} ::
+      GramLab.Data.Assoc.Assoc assoc2 k v => assoc -> assoc2
+    RecFlag: Recursive
+instance GramLab.Data.Assoc.Assoc [Data.IntMap.Base.IntMap,
+                                   GHC.Types.Int, .]
+  = GramLab.Data.Assoc.$fAssocIntMapIntv
+instance GramLab.Data.Assoc.Assoc [Data.Map.Base.Map, ., .]
+  = GramLab.Data.Assoc.$fAssocMapkv
+instance GramLab.Data.Assoc.Assoc [[], ., .]
+  = GramLab.Data.Assoc.$fAssoc[]kv
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

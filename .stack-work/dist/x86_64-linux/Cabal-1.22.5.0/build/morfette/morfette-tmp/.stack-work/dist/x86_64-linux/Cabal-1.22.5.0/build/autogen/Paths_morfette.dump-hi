@@ -1,0 +1,435 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-31 18:03:48.980239 UTC
+
+interface main@main:Paths_morfette 7103
+  interface hash: eb33c809d4fe98e7da4289aeb9500061
+  ABI hash: 7ceab21313836442f8382927867ed3bb
+  export-list hash: 54fa550105c70eb2f6aa3b30c8d206c4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a7e942c02b7dc416460fc8ca52587bef
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Paths_morfette.getBinDir
+  Paths_morfette.getDataDir
+  Paths_morfette.getDataFileName
+  Paths_morfette.getLibDir
+  Paths_morfette.getLibexecDir
+  Paths_morfette.getSysconfDir
+  Paths_morfette.version
+module dependencies:
+package dependencies: base-4.8.2.0* ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Control.Exception e9090e246fba030faecf7b81b3e8e320
+import  -/  base-4.8.2.0:Control.Exception.Base b99410eaf0cc6bb119b1d45a497c1b10
+import  -/  base-4.8.2.0:Data.Version 9815b783f03931eca811eea941e5e81a
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.IO bb5b81adcea33b14bd4abe16d7dde45f
+import  -/  base-4.8.2.0:GHC.IO.Exception e38c1261b70caecb7af416b94c82c925
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.Environment ba6e36000c8274703cf7786fbe8d0f6c
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+c1d3b3063735c35fde102f0215e27fa5
+  getBinDir :: GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Paths_morfette.getBinDir1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <GHC.IO.FilePath>_R)) -}
+59d7a45253e99b981d782fec663b3ec1
+  getBinDir1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.Prim.catch#
+                   @ GHC.IO.FilePath
+                   @ GHC.Exception.SomeException
+                   Paths_morfette.getBinDir4
+                   Paths_morfette.getBinDir2
+                   eta) -}
+d31ee9a46f21aa993d441994f0fe2482
+  getBinDir2 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 2,
+     Unfolding: (\ e1 :: GHC.Exception.SomeException[OneShot]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case e1 of wild { GHC.Exception.SomeException e100 $dException1 e2 ->
+                 case (GHC.Exception.$p1Exception @ e100 $dException1)
+                        `cast`
+                      (Data.Typeable.Internal.NTCo:Typeable[0] <*>_N <e100>_N)
+                        (GHC.Prim.proxy#
+                           @ *
+                           @ e100) of wild1 { Data.Typeable.Internal.TypeRep dt dt1 ds2 ds3 ds4 ->
+                 case dt of wild2 {
+                   DEFAULT
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ GHC.IO.FilePath
+                        wild
+                        eta
+                   __word 7238999624334008818
+                   -> case dt1 of wild3 {
+                        DEFAULT
+                        -> GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.IO.FilePath
+                             wild
+                             eta
+                        __word 10769272474234763719
+                        -> (# eta, Paths_morfette.getBinDir3 #) } } } }) -}
+7e60a7335636b83b8a1790e43486758a
+  getBinDir3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "/home/jmo/projects/morfette/.stack-work/install/x86_64-linux/lts-6.14/7.10.3/bin"#) -}
+6e7e6a50292b3b7dc5f864c7e44a80f4
+  getBinDir4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1,
+     Unfolding: (System.Environment.getEnv1
+                   Paths_morfette.getBinDir5) -}
+223d8bd28df9e562cc85ba61447bb9d4
+  getBinDir5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "morfette_bindir"#) -}
+cd040797dba220293a5ddd03b7fd1ea7
+  getDataDir :: GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Paths_morfette.getDataDir1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <GHC.IO.FilePath>_R)) -}
+ac69da4f7f0bcb1bfdbb2f3d8bbece55
+  getDataDir1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.Prim.catch#
+                   @ GHC.IO.FilePath
+                   @ GHC.Exception.SomeException
+                   Paths_morfette.getDataDir4
+                   Paths_morfette.getDataDir2
+                   eta) -}
+0005b97a3f452a454687fd70c1036296
+  getDataDir2 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 2,
+     Unfolding: (\ e1 :: GHC.Exception.SomeException[OneShot]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case e1 of wild { GHC.Exception.SomeException e100 $dException1 e2 ->
+                 case (GHC.Exception.$p1Exception @ e100 $dException1)
+                        `cast`
+                      (Data.Typeable.Internal.NTCo:Typeable[0] <*>_N <e100>_N)
+                        (GHC.Prim.proxy#
+                           @ *
+                           @ e100) of wild1 { Data.Typeable.Internal.TypeRep dt dt1 ds2 ds3 ds4 ->
+                 case dt of wild2 {
+                   DEFAULT
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ GHC.IO.FilePath
+                        wild
+                        eta
+                   __word 7238999624334008818
+                   -> case dt1 of wild3 {
+                        DEFAULT
+                        -> GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.IO.FilePath
+                             wild
+                             eta
+                        __word 10769272474234763719
+                        -> (# eta, Paths_morfette.getDataDir3 #) } } } }) -}
+52016ad89478a02515b045b6f4afd42b
+  getDataDir3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "/home/jmo/projects/morfette/.stack-work/install/x86_64-linux/lts-6.14/7.10.3/share/x86_64-linux-ghc-7.10.3/morfette-0.4.3"#) -}
+9081b700972abac946948dfc36bafc25
+  getDataDir4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1,
+     Unfolding: (System.Environment.getEnv1
+                   Paths_morfette.getDataDir5) -}
+740b195d176060f35e5b5003783add29
+  getDataDir5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "morfette_datadir"#) -}
+5bd015348e695b23dbd319bd24a2cd95
+  getDataFileName :: GHC.IO.FilePath -> GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Paths_morfette.getDataFileName1
+                  `cast`
+                (<GHC.IO.FilePath>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.IO.FilePath>_R)) -}
+2e16b0792664001174d6f67c97909d6e
+  getDataFileName1 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: (\ name :: GHC.IO.FilePath
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.Prim.catch#
+                        @ GHC.IO.FilePath
+                        @ GHC.Exception.SomeException
+                        Paths_morfette.getDataDir4
+                        Paths_morfette.getDataDir2
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    GHC.Base.++
+                      @ GHC.Types.Char
+                      ipv1
+                      (GHC.CString.unpackAppendCString# "/"# name) #) }) -}
+e228c77cd8f1f5ec7d052b41923fab9f
+  getLibDir :: GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Paths_morfette.getLibDir1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <GHC.IO.FilePath>_R)) -}
+4bc89feac650ea680d2224621d4530da
+  getLibDir1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.Prim.catch#
+                   @ GHC.IO.FilePath
+                   @ GHC.Exception.SomeException
+                   Paths_morfette.getLibDir4
+                   Paths_morfette.getLibDir2
+                   eta) -}
+b6ccbc02e618d36750f33ea1cfaf4125
+  getLibDir2 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 2,
+     Unfolding: (\ e1 :: GHC.Exception.SomeException[OneShot]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case e1 of wild { GHC.Exception.SomeException e100 $dException1 e2 ->
+                 case (GHC.Exception.$p1Exception @ e100 $dException1)
+                        `cast`
+                      (Data.Typeable.Internal.NTCo:Typeable[0] <*>_N <e100>_N)
+                        (GHC.Prim.proxy#
+                           @ *
+                           @ e100) of wild1 { Data.Typeable.Internal.TypeRep dt dt1 ds2 ds3 ds4 ->
+                 case dt of wild2 {
+                   DEFAULT
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ GHC.IO.FilePath
+                        wild
+                        eta
+                   __word 7238999624334008818
+                   -> case dt1 of wild3 {
+                        DEFAULT
+                        -> GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.IO.FilePath
+                             wild
+                             eta
+                        __word 10769272474234763719
+                        -> (# eta, Paths_morfette.getLibDir3 #) } } } }) -}
+23a35cc36692d2c5f3abb47524624f41
+  getLibDir3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "/home/jmo/projects/morfette/.stack-work/install/x86_64-linux/lts-6.14/7.10.3/lib/x86_64-linux-ghc-7.10.3/morfette-0.4.3-4EpJNyEuuQ63WeqBn9w2Vs"#) -}
+e43896c96e64355fd1a46b05834092cd
+  getLibDir4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1,
+     Unfolding: (System.Environment.getEnv1
+                   Paths_morfette.getLibDir5) -}
+59e6c05b6acc1e8ccf6a216ed9df4eff
+  getLibDir5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "morfette_libdir"#) -}
+b1bf63a4c436469043422e4ce635e818
+  getLibexecDir :: GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Paths_morfette.getLibexecDir1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <GHC.IO.FilePath>_R)) -}
+eedc7c8ae200bfc7c4d8cd5770984259
+  getLibexecDir1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.Prim.catch#
+                   @ GHC.IO.FilePath
+                   @ GHC.Exception.SomeException
+                   Paths_morfette.getLibexecDir4
+                   Paths_morfette.getLibexecDir2
+                   eta) -}
+cd7140496a711b73b2786a4e60ad217e
+  getLibexecDir2 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 2,
+     Unfolding: (\ e1 :: GHC.Exception.SomeException[OneShot]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case e1 of wild { GHC.Exception.SomeException e100 $dException1 e2 ->
+                 case (GHC.Exception.$p1Exception @ e100 $dException1)
+                        `cast`
+                      (Data.Typeable.Internal.NTCo:Typeable[0] <*>_N <e100>_N)
+                        (GHC.Prim.proxy#
+                           @ *
+                           @ e100) of wild1 { Data.Typeable.Internal.TypeRep dt dt1 ds2 ds3 ds4 ->
+                 case dt of wild2 {
+                   DEFAULT
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ GHC.IO.FilePath
+                        wild
+                        eta
+                   __word 7238999624334008818
+                   -> case dt1 of wild3 {
+                        DEFAULT
+                        -> GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.IO.FilePath
+                             wild
+                             eta
+                        __word 10769272474234763719
+                        -> (# eta, Paths_morfette.getLibexecDir3 #) } } } }) -}
+95a4c43ce13eea079c3d8a1e0db564f3
+  getLibexecDir3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "/home/jmo/projects/morfette/.stack-work/install/x86_64-linux/lts-6.14/7.10.3/libexec"#) -}
+4cd3722c5a21f72e43f13b86ea3c6645
+  getLibexecDir4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1,
+     Unfolding: (System.Environment.getEnv1
+                   Paths_morfette.getLibexecDir5) -}
+434057d960451d9b4c836a5c6329585e
+  getLibexecDir5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "morfette_libexecdir"#) -}
+88f38ec51571328e9f723ea570069a03
+  getSysconfDir :: GHC.Types.IO GHC.IO.FilePath
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Paths_morfette.getSysconfDir1
+                  `cast`
+                (Sym (GHC.Types.NTCo:IO[0] <GHC.IO.FilePath>_R)) -}
+07d8bec3a4169cf7ccbc32c3751ae18c
+  getSysconfDir1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.Prim.catch#
+                   @ GHC.IO.FilePath
+                   @ GHC.Exception.SomeException
+                   Paths_morfette.getSysconfDir4
+                   Paths_morfette.getSysconfDir2
+                   eta) -}
+2e1f2187d878b7250330b26ff90cf939
+  getSysconfDir2 ::
+    GHC.Exception.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.IO.FilePath #)
+  {- Arity: 2,
+     Unfolding: (\ e1 :: GHC.Exception.SomeException[OneShot]
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case e1 of wild { GHC.Exception.SomeException e100 $dException1 e2 ->
+                 case (GHC.Exception.$p1Exception @ e100 $dException1)
+                        `cast`
+                      (Data.Typeable.Internal.NTCo:Typeable[0] <*>_N <e100>_N)
+                        (GHC.Prim.proxy#
+                           @ *
+                           @ e100) of wild1 { Data.Typeable.Internal.TypeRep dt dt1 ds2 ds3 ds4 ->
+                 case dt of wild2 {
+                   DEFAULT
+                   -> GHC.Prim.raiseIO#
+                        @ GHC.Exception.SomeException
+                        @ GHC.IO.FilePath
+                        wild
+                        eta
+                   __word 7238999624334008818
+                   -> case dt1 of wild3 {
+                        DEFAULT
+                        -> GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ GHC.IO.FilePath
+                             wild
+                             eta
+                        __word 10769272474234763719
+                        -> (# eta, Paths_morfette.getSysconfDir3 #) } } } }) -}
+1667ed7b44be6d93e04e71712414cbc0
+  getSysconfDir3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "/home/jmo/projects/morfette/.stack-work/install/x86_64-linux/lts-6.14/7.10.3/etc"#) -}
+65779f20b48c61f1b0eaf5bbe821ee15
+  getSysconfDir4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+  {- Arity: 1,
+     Unfolding: (System.Environment.getEnv1
+                   Paths_morfette.getSysconfDir5) -}
+2ca91e42232a72f55c382e6de50b6bbe
+  getSysconfDir5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "morfette_sysconfdir"#) -}
+a04476b82d5d740dabe99553efff6645
+  version :: Data.Version.Version
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.Version.Version
+                   Paths_morfette.version1
+                   (GHC.Types.[] @ GHC.Base.String)) -}
+53f24b4fa58a9b95f4a9af809ab87b97
+  version1 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Paths_morfette.version6
+                   Paths_morfette.version2) -}
+1405395eb97311a9fa5c50c0b0ee73d5
+  version2 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Paths_morfette.version5
+                   Paths_morfette.version3) -}
+4ca3725aeac1a9bcbfb1b99994802065
+  version3 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Paths_morfette.version4
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+781205f67dc6bdc9b62b1e06e09f8e0a
+  version4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3) -}
+749aa21dcfa5c2998db58765d010c25d
+  version5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4) -}
+0158afc676906705e0de34e0529d4a3e
+  version6 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

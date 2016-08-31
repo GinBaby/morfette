@@ -1,0 +1,1029 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-31 18:03:48.872868 UTC
+
+interface main@main:GramLab.Data.StringLike 7103
+  interface hash: e323130f06a189a6bfb565372933d5e2
+  ABI hash: 94ddc44a7f9a370e73b45ef95697cbcf
+  export-list hash: 298e1b4c76516d41437d6aa1211151fc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: e3a07a88a4eac6e213a88f9459e8b324
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  GramLab.Data.StringLike.StringLike{GramLab.Data.StringLike.append GramLab.Data.StringLike.cons GramLab.Data.StringLike.fromString GramLab.Data.StringLike.init GramLab.Data.StringLike.inits GramLab.Data.StringLike.length GramLab.Data.StringLike.map GramLab.Data.StringLike.null GramLab.Data.StringLike.reverse GramLab.Data.StringLike.splitAt GramLab.Data.StringLike.tail GramLab.Data.StringLike.tails GramLab.Data.StringLike.toString GramLab.Data.StringLike.uncons}
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0* bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6*
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 utf8-string-0.3@utf8s_Evdgh7PUHf0DzUKk7aDqth
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:Data.OldList d8fd80b0e14aa085ce6219cd89dad356
+import  -/  base-4.8.2.0:Data.Word ec8deb535202352cc8b509b14004bcbd
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString 4d711736b0a2cbe42c3b3c3f195a9aad
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Internal 9f30be13d4c49eabc652d3eef55cc512
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy c4609121af4dcb73dbc93c82637bae8c
+import  -/  bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Lazy.Internal ff4155acf547512f0ee8c37e505b0d60
+import  -/  utf8-string-0.3@utf8s_Evdgh7PUHf0DzUKk7aDqth:Codec.Binary.UTF8.String 7f12ce5d21364ca3f5ab854ba06eec32
+45fca0cefcffff3e4fdc06a4e3a1c1bf
+  $dmappend ::
+    GramLab.Data.StringLike.StringLike seq a => seq -> seq -> seq
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(S)LLLLLLLLLLLL),U(C(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   w :: seq
+                   w' :: seq ->
+                 GramLab.Data.StringLike.fromString
+                   @ seq
+                   @ a
+                   $dStringLike
+                   (GHC.Base.augment
+                      @ a
+                      (\ @ b c :: a -> b -> b[OneShot] n :: b[OneShot] ->
+                       GHC.Base.foldr
+                         @ a
+                         @ b
+                         c
+                         n
+                         (GramLab.Data.StringLike.toString @ seq @ a $dStringLike w))
+                      (GramLab.Data.StringLike.toString @ seq @ a $dStringLike w'))) -}
+0bde559936da216ec216291ba400c3b2
+  $dmcons ::
+    GramLab.Data.StringLike.StringLike seq a => a -> seq -> seq
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(LC(S)LLLLLLLLLLLL),U(1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   x :: a
+                   xs :: seq ->
+                 GHC.Base.$
+                   @ [a]
+                   @ seq
+                   (GramLab.Data.StringLike.fromString @ seq @ a $dStringLike)
+                   (GHC.Types.:
+                      @ a
+                      x
+                      (GramLab.Data.StringLike.toString @ seq @ a $dStringLike xs))) -}
+0cc1daa87856eb8ac6f7ba33cb967d36
+  $dminit :: GramLab.Data.StringLike.StringLike seq a => seq -> seq
+  {- Arity: 2,
+     Strictness: <S(LC(S)LLLLLLLLLLLL),U(1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   eta :: seq ->
+                 GramLab.Data.StringLike.fromString
+                   @ seq
+                   @ a
+                   $dStringLike
+                   (GHC.List.init
+                      @ a
+                      (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta))) -}
+941c2a1ab92f2300f4d09d42a5cd781d
+  $dminits ::
+    GramLab.Data.StringLike.StringLike seq a => seq -> [seq]
+  {- Arity: 2,
+     Strictness: <L,U(1*C1(U),1*C(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   eta :: seq ->
+                 GHC.Base.build
+                   @ seq
+                   (\ @ b1 c :: seq -> b1 -> b1[OneShot] n :: b1[OneShot] ->
+                    GHC.Base.foldr
+                      @ [a]
+                      @ b1
+                      (GHC.Base.mapFB
+                         @ seq
+                         @ b1
+                         @ [a]
+                         c
+                         (GramLab.Data.StringLike.fromString @ seq @ a $dStringLike))
+                      n
+                      (Data.OldList.inits
+                         @ a
+                         (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta)))) -}
+eeef40c4f3f6ebdb0616367fd54ae24a
+  $dmlength ::
+    GramLab.Data.StringLike.StringLike seq a => seq -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(S)LLLLLLLLLLLLL),1*U(1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U>m,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   eta :: seq ->
+                 GHC.Base.foldr
+                   @ a
+                   @ (GHC.Types.Int -> GHC.Types.Int)
+                   (GHC.List.lengthFB @ a)
+                   GHC.List.idLength
+                   (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta)
+                   (GHC.Types.I# 0)) -}
+65a18261527b3a77942f39e2f1470f68
+  $dmmap ::
+    GramLab.Data.StringLike.StringLike seq a => (a -> a) -> seq -> seq
+  {- Arity: 3,
+     Strictness: <S(LC(S)LLLLLLLLLLLL),1*U(A,1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,A><L,A>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   f :: a -> a
+                   eta :: seq ->
+                 GramLab.Data.StringLike.fromString
+                   @ seq
+                   @ a
+                   $dStringLike
+                   (GramLab.Data.StringLike.$dmmap_$cmap
+                      @ a
+                      f
+                      (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta))) -}
+c555071b09fd018e5e765fafb760cbf5
+  $dmmap_$cmap :: (a -> a) -> [a] -> [a]
+  {- Arity: 2, Strictness: <B,A><B,A>b, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a w :: a -> a w1 :: [a] ->
+                 GramLab.Data.StringLike.$w$cmap @ a GHC.Prim.void#) -}
+d2db7a2e33412ee5843397adeea71716
+  $dmnull ::
+    GramLab.Data.StringLike.StringLike seq a => seq -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(S)LLLLLLLLLLLLL),1*U(1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   eta :: seq ->
+                 GHC.List.null
+                   @ a
+                   (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta)) -}
+294ff6aab8166b621d49d027ff873c83
+  $dmreverse ::
+    GramLab.Data.StringLike.StringLike seq a => seq -> seq
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LC(S)LLLLLLLLLLLL),U(1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   eta :: seq ->
+                 GramLab.Data.StringLike.fromString
+                   @ seq
+                   @ a
+                   $dStringLike
+                   (GHC.List.reverse
+                      @ a
+                      (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta))) -}
+400f3816a78c7eceef44955e1c16718a
+  $dmsplitAt ::
+    GramLab.Data.StringLike.StringLike seq a =>
+    GHC.Types.Int -> seq -> (seq, seq)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(1*C1(U),C(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,1*U(U)><L,U>m,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   i :: GHC.Types.Int
+                   w :: seq ->
+                 let {
+                   ds :: ([a], [a])
+                   = GHC.List.splitAt
+                       @ a
+                       i
+                       (GramLab.Data.StringLike.toString @ seq @ a $dStringLike w)
+                 } in
+                 (GramLab.Data.StringLike.fromString
+                    @ seq
+                    @ a
+                    $dStringLike
+                    (case ds of wild { (,) w' w'' -> w' }),
+                  GramLab.Data.StringLike.fromString
+                    @ seq
+                    @ a
+                    $dStringLike
+                    (case ds of wild { (,) w' w'' -> w'' }))) -}
+257dcc30476b835ba086437990280e5d
+  $dmtail :: GramLab.Data.StringLike.StringLike seq a => seq -> seq
+  {- Arity: 2,
+     Strictness: <S(LC(S)LLLLLLLLLLLL),U(1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   eta :: seq ->
+                 GramLab.Data.StringLike.fromString
+                   @ seq
+                   @ a
+                   $dStringLike
+                   (GHC.List.tail
+                      @ a
+                      (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta))) -}
+6f324c49739753cb5a400733f52e965b
+  $dmtails ::
+    GramLab.Data.StringLike.StringLike seq a => seq -> [seq]
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,U(1*C1(U),1*U,A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   eta :: seq ->
+                 GHC.Base.build
+                   @ seq
+                   (\ @ b1 c :: seq -> b1 -> b1[OneShot] n :: b1[OneShot] ->
+                    GHC.Base.foldr
+                      @ [a]
+                      @ b1
+                      (GHC.Base.mapFB
+                         @ seq
+                         @ b1
+                         @ [a]
+                         c
+                         (GramLab.Data.StringLike.fromString @ seq @ a $dStringLike))
+                      n
+                      (Data.OldList.tails
+                         @ a
+                         (GramLab.Data.StringLike.toString @ seq @ a $dStringLike eta)))) -}
+6c67104f81400bba208cf91745a7d3de
+  $dmuncons ::
+    GramLab.Data.StringLike.StringLike seq a =>
+    seq -> GHC.Base.Maybe (a, seq)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(C(S)LLLLLLLLLLLLL),U(1*C1(U),1*C1(U),A,A,A,A,A,A,A,A,A,A,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, False)
+                (\ @ seq
+                   @ a
+                   $dStringLike :: GramLab.Data.StringLike.StringLike seq a
+                   xs :: seq ->
+                 case GramLab.Data.StringLike.toString
+                        @ seq
+                        @ a
+                        $dStringLike
+                        xs of wild {
+                   [] -> GHC.Base.Nothing @ (a, seq)
+                   : x xs1
+                   -> GHC.Base.Just
+                        @ (a, seq)
+                        (x,
+                         GramLab.Data.StringLike.fromString
+                           @ seq
+                           @ a
+                           $dStringLike
+                           xs1) }) -}
+650bfdae15e3c7e3293c07b07cd81f62
+  $fStringLikeByteStringChar ::
+    GramLab.Data.StringLike.StringLike
+      Data.ByteString.Lazy.Internal.ByteString GHC.Types.Char
+  DFunId[0]
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.ByteString.Lazy.Internal.ByteString
+                  @ GHC.Types.Char
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$ctoString
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$cfromString
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$clength
+                  Data.ByteString.Lazy.null
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$ctail
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$cinit
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$ctails
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$cinits
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$csplitAt
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$creverse
+                  Data.ByteString.Lazy.Internal.$fMonoidByteString_$cmappend
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$ccons
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$cuncons
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar_$cmap -}
+650bfdae15e3c7e3293c07b07cd81f62
+  $fStringLikeByteStringChar0 ::
+    GramLab.Data.StringLike.StringLike
+      Data.ByteString.Internal.ByteString GHC.Types.Char
+  DFunId[0]
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Data.ByteString.Internal.ByteString
+                  @ GHC.Types.Char
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ctoString
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$clength
+                  Data.ByteString.null
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ctail
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cinit
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ctails
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cinits
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$csplitAt
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$creverse
+                  Data.ByteString.Internal.$fMonoidByteString_$cmappend
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ccons
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cuncons
+                  GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cmap -}
+712ea7186c9c27ca4e0525a112cefd90
+  $fStringLikeByteStringChar0_$ccons ::
+    GHC.Types.Char
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 2, Strictness: <L,U><L,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: GHC.Types.Char xs :: Data.ByteString.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      x
+                      (GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ctoString
+                         xs))) -}
+4f081ae48469cbbab109268fe36f4613
+  $fStringLikeByteStringChar0_$cfromString ::
+    [GHC.Types.Char] -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ x :: [GHC.Types.Char] ->
+                 let {
+                   ws :: [GHC.Word.Word8]
+                   = GramLab.Data.StringLike.$fStringLikeByteStringChar0_go x
+                 } in
+                 Data.ByteString.Internal.unsafePackLenBytes
+                   (case GHC.List.$wlenAcc @ GHC.Word.Word8 ws 0 of ww2 { DEFAULT ->
+                    GHC.Types.I# ww2 })
+                   ws) -}
+268ed35760354fb132a9ad2d2956aaef
+  $fStringLikeByteStringChar0_$cinit ::
+    Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
+     Unfolding: (\ eta :: Data.ByteString.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                   (case eta of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                    case Codec.Binary.UTF8.String.decode
+                           (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                              ww1
+                              ww2
+                              ww3
+                              ww4
+                              (GHC.Types.[] @ GHC.Word.Word8)) of wild {
+                      [] -> GHC.List.init2 @ GHC.Types.Char
+                      : x xs -> GHC.List.init1 @ GHC.Types.Char x xs } })) -}
+abfb05938587d7ee6aede18ec7bbd6d1
+  $fStringLikeByteStringChar0_$cinits ::
+    Data.ByteString.Internal.ByteString
+    -> [Data.ByteString.Internal.ByteString]
+  {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
+     Unfolding: (\ eta :: Data.ByteString.Internal.ByteString ->
+                 GHC.Base.map
+                   @ [GHC.Types.Char]
+                   @ Data.ByteString.Internal.ByteString
+                   GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                   (Data.OldList.inits
+                      @ GHC.Types.Char
+                      (case eta of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                       Codec.Binary.UTF8.String.decode
+                         (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                            ww1
+                            ww2
+                            ww3
+                            ww4
+                            (GHC.Types.[] @ GHC.Word.Word8)) }))) -}
+be5186a8780b70c8f4f10f6c75d8f149
+  $fStringLikeByteStringChar0_$clength ::
+    Data.ByteString.Internal.ByteString -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Data.ByteString.Internal.ByteString ->
+                 case w of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 case GHC.List.$wlenAcc
+                        @ GHC.Types.Char
+                        (Codec.Binary.UTF8.String.decode
+                           (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                              ww1
+                              ww2
+                              ww3
+                              ww4
+                              (GHC.Types.[] @ GHC.Word.Word8)))
+                        0 of ww5 { DEFAULT ->
+                 GHC.Types.I# ww5 } }) -}
+15dd4d873fe8a4e0f515936689d39ba4
+  $fStringLikeByteStringChar0_$cmap ::
+    (GHC.Types.Char -> GHC.Types.Char)
+    -> Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 2, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, False)
+                (\ f :: GHC.Types.Char -> GHC.Types.Char
+                   x :: Data.ByteString.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                   (GramLab.Data.StringLike.$dmmap_$cmap
+                      @ GHC.Types.Char
+                      f
+                      (GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ctoString
+                         x))) -}
+d2ef9cde4f4c8bbef8aec1610aa445ab
+  $fStringLikeByteStringChar0_$creverse ::
+    Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ eta :: Data.ByteString.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                   (GHC.List.reverse1
+                      @ GHC.Types.Char
+                      (GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ctoString
+                         eta)
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+a40c2a25d7ea9efebe9fa1da94fe8eac
+  $fStringLikeByteStringChar0_$csplitAt ::
+    GHC.Types.Int
+    -> Data.ByteString.Internal.ByteString
+    -> (Data.ByteString.Internal.ByteString,
+        Data.ByteString.Internal.ByteString)
+  {- Arity: 2, Strictness: <L,1*U(U)><L,1*U(U,U,U,U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: Data.ByteString.Internal.ByteString ->
+                 case GramLab.Data.StringLike.$w$csplitAt1
+                        w
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+8ba4a045b610e937ab41e0800b68d1cb
+  $fStringLikeByteStringChar0_$ctail ::
+    Data.ByteString.Internal.ByteString
+    -> Data.ByteString.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
+     Unfolding: (\ eta :: Data.ByteString.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                   (case eta of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                    case Codec.Binary.UTF8.String.decode
+                           (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                              ww1
+                              ww2
+                              ww3
+                              ww4
+                              (GHC.Types.[] @ GHC.Word.Word8)) of wild {
+                      [] -> GHC.List.scanl2 @ GHC.Types.Char : ds1 xs -> xs } })) -}
+8c12847df9aaf2ed862e5bcacd171977
+  $fStringLikeByteStringChar0_$ctails ::
+    Data.ByteString.Internal.ByteString
+    -> [Data.ByteString.Internal.ByteString]
+  {- Arity: 1, Strictness: <L,1*U(U,U,U,U)>,
+     Unfolding: (\ eta :: Data.ByteString.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar0_tailsGo
+                   (GramLab.Data.StringLike.$fStringLikeByteStringChar0_$ctoString
+                      eta)) -}
+d16b4acf726216b142ce69219ede1b87
+  $fStringLikeByteStringChar0_$ctoString ::
+    Data.ByteString.Internal.ByteString -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Data.ByteString.Internal.ByteString ->
+                 case w of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 GramLab.Data.StringLike.$w$ctoString ww1 ww2 ww3 ww4 }) -}
+eb5273da63fba3e07e93e84296be3338
+  $fStringLikeByteStringChar0_$cuncons ::
+    Data.ByteString.Internal.ByteString
+    -> GHC.Base.Maybe
+         (GHC.Types.Char, Data.ByteString.Internal.ByteString)
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U)>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Data.ByteString.Internal.ByteString ->
+                 case w of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 GramLab.Data.StringLike.$w$cuncons ww1 ww2 ww3 ww4 }) -}
+eaed093367efcb7c305d34d97a5c5dd6
+  $fStringLikeByteStringChar0_go ::
+    [GHC.Types.Char] -> [GHC.Word.Word8]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+357331a13845ea822f7ad4b13a4a8c92
+  $fStringLikeByteStringChar0_tailsGo ::
+    [GHC.Types.Char] -> [Data.ByteString.Internal.ByteString]
+  {- Arity: 1, Strictness: <L,U> -}
+c717b626fba10225e901d1862f443388
+  $fStringLikeByteStringChar1 :: ([GHC.Types.Char], [GHC.Types.Char])
+  {- HasNoCafRefs,
+     Unfolding: ((GHC.Types.[] @ GHC.Types.Char,
+                  GHC.Types.[] @ GHC.Types.Char)) -}
+3dd6600a4034de4f618b6c82102b492e
+  $fStringLikeByteStringChar_$ccons ::
+    GHC.Types.Char
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 2, Strictness: <L,U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ x :: GHC.Types.Char
+                   xs :: Data.ByteString.Lazy.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar_$cfromString
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      x
+                      (GramLab.Data.StringLike.$fStringLikeByteStringChar_$ctoString
+                         xs))) -}
+47a071fdea04b197c5a6e0792da252b9
+  $fStringLikeByteStringChar_$cfromString ::
+    [GHC.Types.Char] -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ x :: [GHC.Types.Char] ->
+                 Data.ByteString.Lazy.Internal.packBytes_$spackChunks
+                   32
+                   (GramLab.Data.StringLike.$fStringLikeByteStringChar_go x)) -}
+d7f5d4a8241a13419772a6e3b2f24fcd
+  $fStringLikeByteStringChar_$cinit ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ eta :: Data.ByteString.Lazy.Internal.ByteString ->
+                 Data.ByteString.Lazy.Internal.packBytes_$spackChunks
+                   32
+                   (case Codec.Binary.UTF8.String.decode
+                           (Data.ByteString.Lazy.Internal.unpackBytes eta) of wild {
+                      [] -> case GHC.List.init2 ret_ty [GHC.Word.Word8] of {}
+                      : x xs
+                      -> GramLab.Data.StringLike.$fStringLikeByteStringChar_go
+                           (GHC.List.init1 @ GHC.Types.Char x xs) })) -}
+6c9e94e1c9e3501cd1f40b2b9ab1418a
+  $fStringLikeByteStringChar_$cinits ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> [Data.ByteString.Lazy.Internal.ByteString]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ eta :: Data.ByteString.Lazy.Internal.ByteString ->
+                 GHC.Base.map
+                   @ [GHC.Types.Char]
+                   @ Data.ByteString.Lazy.Internal.ByteString
+                   GramLab.Data.StringLike.$fStringLikeByteStringChar_$cfromString
+                   (Data.OldList.inits
+                      @ GHC.Types.Char
+                      (Codec.Binary.UTF8.String.decode
+                         (Data.ByteString.Lazy.Internal.unpackBytes eta)))) -}
+a9bdbda9cdb1700cc2f0d824e2183b74
+  $fStringLikeByteStringChar_$clength ::
+    Data.ByteString.Lazy.Internal.ByteString -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Data.ByteString.Lazy.Internal.ByteString ->
+                 case GHC.List.$wlenAcc
+                        @ GHC.Types.Char
+                        (Codec.Binary.UTF8.String.decode
+                           (Data.ByteString.Lazy.Internal.unpackBytes w))
+                        0 of ww { DEFAULT ->
+                 GHC.Types.I# ww }) -}
+8724b8ff2aa7b4a130bfde705d53cf14
+  $fStringLikeByteStringChar_$cmap ::
+    (GHC.Types.Char -> GHC.Types.Char)
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 2, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, False)
+                (\ f :: GHC.Types.Char -> GHC.Types.Char
+                   x :: Data.ByteString.Lazy.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar_$cfromString
+                   (GramLab.Data.StringLike.$dmmap_$cmap
+                      @ GHC.Types.Char
+                      f
+                      (GramLab.Data.StringLike.$fStringLikeByteStringChar_$ctoString
+                         x))) -}
+1cee7347291513fd068a3eb7f9688c9b
+  $fStringLikeByteStringChar_$creverse ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ eta :: Data.ByteString.Lazy.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar_$cfromString
+                   (GHC.List.reverse1
+                      @ GHC.Types.Char
+                      (GramLab.Data.StringLike.$fStringLikeByteStringChar_$ctoString eta)
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+d2aa11f4c82cf611626a3f8ae70ec99d
+  $fStringLikeByteStringChar_$csplitAt ::
+    GHC.Types.Int
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> (Data.ByteString.Lazy.Internal.ByteString,
+        Data.ByteString.Lazy.Internal.ByteString)
+  {- Arity: 2, Strictness: <L,1*U(U)><L,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int
+                   w1 :: Data.ByteString.Lazy.Internal.ByteString ->
+                 case GramLab.Data.StringLike.$w$csplitAt
+                        w
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+47ee118e10a4d81f099f33c0c2cbcc4d
+  $fStringLikeByteStringChar_$ctail ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> Data.ByteString.Lazy.Internal.ByteString
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ eta :: Data.ByteString.Lazy.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar_$cfromString
+                   (case Codec.Binary.UTF8.String.decode
+                           (Data.ByteString.Lazy.Internal.unpackBytes eta) of wild {
+                      [] -> GHC.List.scanl2 @ GHC.Types.Char : ds1 xs -> xs })) -}
+b74f9f0efd5dd1a34c23721c2f7cdfa5
+  $fStringLikeByteStringChar_$ctails ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> [Data.ByteString.Lazy.Internal.ByteString]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ eta :: Data.ByteString.Lazy.Internal.ByteString ->
+                 GramLab.Data.StringLike.$fStringLikeByteStringChar_tailsGo
+                   (GramLab.Data.StringLike.$fStringLikeByteStringChar_$ctoString
+                      eta)) -}
+544ef160864d0e2d3d9a14710a6402bc
+  $fStringLikeByteStringChar_$ctoString ::
+    Data.ByteString.Lazy.Internal.ByteString -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ x :: Data.ByteString.Lazy.Internal.ByteString ->
+                 Codec.Binary.UTF8.String.decode
+                   (Data.ByteString.Lazy.Internal.unpackBytes x)) -}
+4bcb212aa7dee74c574c4f8a096d242b
+  $fStringLikeByteStringChar_$cuncons ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> GHC.Base.Maybe
+         (GHC.Types.Char, Data.ByteString.Lazy.Internal.ByteString)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ xs :: Data.ByteString.Lazy.Internal.ByteString ->
+                 case Codec.Binary.UTF8.String.decode
+                        (Data.ByteString.Lazy.Internal.unpackBytes xs) of wild {
+                   []
+                   -> GHC.Base.Nothing
+                        @ (GHC.Types.Char, Data.ByteString.Lazy.Internal.ByteString)
+                   : x xs1
+                   -> GHC.Base.Just
+                        @ (GHC.Types.Char, Data.ByteString.Lazy.Internal.ByteString)
+                        (x,
+                         GramLab.Data.StringLike.$fStringLikeByteStringChar_$cfromString
+                           xs1) }) -}
+19fd2398aad3dd821ff420a58f7b8731
+  $fStringLikeByteStringChar_$sgo ::
+    GHC.Types.Char -> [GHC.Types.Char] -> [GHC.Word.Word8]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U> -}
+32ac7da98fdec65b0041169a18b0866c
+  $fStringLikeByteStringChar_go ::
+    [GHC.Types.Char] -> [GHC.Word.Word8]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+8bb7b1300400beac2b8787ec087d2ea4
+  $fStringLikeByteStringChar_tailsGo ::
+    [GHC.Types.Char] -> [Data.ByteString.Lazy.Internal.ByteString]
+  {- Arity: 1, Strictness: <L,U> -}
+650bfdae15e3c7e3293c07b07cd81f62
+  $fStringLike[]a :: GramLab.Data.StringLike.StringLike [a] a
+  DFunId[0]
+  {- Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ [a]
+                  @ a
+                  (GHC.Base.id @ [a])
+                  (GHC.Base.id @ [a])
+                  (GramLab.Data.StringLike.$fStringLike[]a_$clength @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$cnull @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$ctail @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$cinit @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$ctails @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$cinits @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$csplitAt @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$creverse @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$cappend @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$ccons @ a)
+                  (GramLab.Data.StringLike.$fStringLike[]a_$cuncons @ a)
+                  (GramLab.Data.StringLike.$dmmap_$cmap @ a) -}
+d0c0de01e205a976091d223d082a2a00
+  $fStringLike[]a1 :: ([a], [a])
+  {- HasNoCafRefs,
+     Unfolding: (\ @ a -> (GHC.Types.[] @ a, GHC.Types.[] @ a)) -}
+54a6d3ac2864c59ee858f79f782c26bb
+  $fStringLike[]a2 :: [a] -> [[a]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U> -}
+2c8c576632b243de77d56fc3d43a8b4c
+  $fStringLike[]a_$cappend :: [a] -> [a] -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (0, True, True) GHC.Base.++ -}
+58d9e8759f24d00f3276e030fc060991
+  $fStringLike[]a_$ccons :: a -> [a] -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (0, True, True) GHC.Types.: -}
+08d1690ec44ef74b3c60d68d16d6e8d5
+  $fStringLike[]a_$cinit :: [a] -> [a]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a eta :: [a] ->
+                 case eta of wild {
+                   [] -> GHC.List.init2 @ a : x xs -> GHC.List.init1 @ a x xs }) -}
+0e4851c258b2ecc52724b7b8ec0b316e
+  $fStringLike[]a_$cinits :: [a] -> [[a]]
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a eta :: [a] ->
+                 GHC.Base.build
+                   @ [a]
+                   (\ @ b1 c :: [a] -> b1 -> b1[OneShot] n :: b1[OneShot] ->
+                    GHC.Base.foldr
+                      @ [a]
+                      @ b1
+                      (GHC.Base.mapFB @ [a] @ b1 @ [a] c (GHC.Base.id @ [a]))
+                      n
+                      (Data.OldList.inits @ a eta))) -}
+9cd76033301f015accf3ba37e2a6c82d
+  $fStringLike[]a_$clength :: [a] -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a eta :: [a] ->
+                 case GHC.List.$wlenAcc @ a eta 0 of ww2 { DEFAULT ->
+                 GHC.Types.I# ww2 }) -}
+3bbbfd081c186bc94b15a6dc0c1bc769
+  $fStringLike[]a_$cnull :: [a] -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a eta :: [a] ->
+                 case eta of wild {
+                   [] -> GHC.Types.True : ds1 ds2 -> GHC.Types.False }) -}
+5ea8b56e861482350a3fdadf21a9b13a
+  $fStringLike[]a_$creverse :: [a] -> [a]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a eta :: [a] ->
+                 GHC.List.reverse1 @ a eta (GHC.Types.[] @ a)) -}
+55265a973611e5ca2709abc2a8bdff7b
+  $fStringLike[]a_$csplitAt :: GHC.Types.Int -> [a] -> ([a], [a])
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a w :: GHC.Types.Int w1 :: [a] ->
+                 case GramLab.Data.StringLike.$w$csplitAt2
+                        @ a
+                        w
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+2d08371aeca70225b508ea49e2951dea
+  $fStringLike[]a_$ctail :: [a] -> [a]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a eta :: [a] ->
+                 case eta of wild { [] -> GHC.List.scanl2 @ a : ds1 xs -> xs }) -}
+df9eb16504a1d84780f6aaad4e144168
+  $fStringLike[]a_$ctails :: [a] -> [[a]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>,
+     Unfolding: (\ @ a eta :: [a] ->
+                 GramLab.Data.StringLike.$fStringLike[]a2 @ a eta) -}
+981daef406d1881126ac72d4933b698d
+  $fStringLike[]a_$cuncons :: [a] -> GHC.Base.Maybe (a, [a])
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a xs :: [a] ->
+                 case xs of wild {
+                   [] -> GHC.Base.Nothing @ (a, [a])
+                   : x xs1 -> GHC.Base.Just @ (a, [a]) (x, xs1) }) -}
+ce875e45199fb943767faeac54e55106
+  $w$cmap :: GHC.Prim.Void# -> [a]
+  {- Arity: 1, Strictness: <L,U>b, Inline: [0] -}
+8c6896f6ff1d7e3b10cce18e3ac66b07
+  $w$csplitAt ::
+    GHC.Types.Int
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> (# Data.ByteString.Lazy.Internal.ByteString,
+          Data.ByteString.Lazy.Internal.ByteString #)
+  {- Arity: 2, Strictness: <L,1*U(U)><L,1*U>, Inline: [0],
+     Unfolding: (\ w :: GHC.Types.Int
+                   w1 :: Data.ByteString.Lazy.Internal.ByteString ->
+                 let {
+                   ds :: ([GHC.Types.Char], [GHC.Types.Char])
+                   = case w of wild { GHC.Types.I# x ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<=# x 0) of wild1 {
+                       GHC.Types.False
+                       -> case Codec.Binary.UTF8.String.decode
+                                 (Data.ByteString.Lazy.Internal.unpackBytes w1) of wild2 {
+                            [] -> GramLab.Data.StringLike.$fStringLikeByteStringChar1
+                            : ipv ipv1
+                            -> case x of ds1 {
+                                 DEFAULT
+                                 -> let {
+                                      ds2 :: ([GHC.Types.Char], [GHC.Types.Char])
+                                      = case GHC.List.splitAt_$s$wsplitAt'
+                                               @ GHC.Types.Char
+                                               (GHC.Prim.-# ds1 1)
+                                               ipv1 of ww { (#,#) ww1 ww2 ->
+                                        (ww1, ww2) }
+                                    } in
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       ipv
+                                       (case ds2 of wild3 { (,) xs' xs'' -> xs' }),
+                                     case ds2 of wild3 { (,) xs' xs'' -> xs'' })
+                                 1
+                                 -> (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       ipv
+                                       (GHC.Types.[] @ GHC.Types.Char),
+                                     ipv1) } }
+                       GHC.Types.True
+                       -> (GHC.Types.[] @ GHC.Types.Char,
+                           Codec.Binary.UTF8.String.decode
+                             (Data.ByteString.Lazy.Internal.unpackBytes w1)) } }
+                 } in
+                 (# Data.ByteString.Lazy.Internal.packBytes_$spackChunks
+                      32
+                      (case ds of wild { (,) w' w'' ->
+                       GramLab.Data.StringLike.$fStringLikeByteStringChar_go w' }),
+                    Data.ByteString.Lazy.Internal.packBytes_$spackChunks
+                      32
+                      (case ds of wild { (,) w' w'' ->
+                       GramLab.Data.StringLike.$fStringLikeByteStringChar_go w'' }) #)) -}
+0bd41876266093c963b2b14aba4e15a7
+  $w$csplitAt1 ::
+    GHC.Types.Int
+    -> Data.ByteString.Internal.ByteString
+    -> (# Data.ByteString.Internal.ByteString,
+          Data.ByteString.Internal.ByteString #)
+  {- Arity: 2, Strictness: <L,1*U(U)><L,1*U(U,U,U,U)>, Inline: [0],
+     Unfolding: (\ w :: GHC.Types.Int
+                   w1 :: Data.ByteString.Internal.ByteString ->
+                 let {
+                   ds :: ([GHC.Types.Char], [GHC.Types.Char])
+                   = case w of wild { GHC.Types.I# x ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<=# x 0) of wild1 {
+                       GHC.Types.False
+                       -> case w1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                          case Codec.Binary.UTF8.String.decode
+                                 (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                                    ww1
+                                    ww2
+                                    ww3
+                                    ww4
+                                    (GHC.Types.[] @ GHC.Word.Word8)) of wild2 {
+                            [] -> GramLab.Data.StringLike.$fStringLikeByteStringChar1
+                            : ipv ipv1
+                            -> case x of ds1 {
+                                 DEFAULT
+                                 -> let {
+                                      ds2 :: ([GHC.Types.Char], [GHC.Types.Char])
+                                      = case GHC.List.splitAt_$s$wsplitAt'
+                                               @ GHC.Types.Char
+                                               (GHC.Prim.-# ds1 1)
+                                               ipv1 of ww7 { (#,#) ww8 ww9 ->
+                                        (ww8, ww9) }
+                                    } in
+                                    (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       ipv
+                                       (case ds2 of wild3 { (,) xs' xs'' -> xs' }),
+                                     case ds2 of wild3 { (,) xs' xs'' -> xs'' })
+                                 1
+                                 -> (GHC.Types.:
+                                       @ GHC.Types.Char
+                                       ipv
+                                       (GHC.Types.[] @ GHC.Types.Char),
+                                     ipv1) } } }
+                       GHC.Types.True
+                       -> (GHC.Types.[] @ GHC.Types.Char,
+                           case w1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                           Codec.Binary.UTF8.String.decode
+                             (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                                ww1
+                                ww2
+                                ww3
+                                ww4
+                                (GHC.Types.[] @ GHC.Word.Word8)) }) } }
+                 } in
+                 (# GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                      (case ds of wild { (,) w' w'' -> w' }),
+                    GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                      (case ds of wild { (,) w' w'' -> w'' }) #)) -}
+ea5cd99515f632a0c60f386fdd99897f
+  $w$csplitAt2 :: GHC.Types.Int -> [a] -> (# [a], [a] #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a w :: GHC.Types.Int w1 :: [a] ->
+                 let {
+                   ds :: ([a], [a])
+                   = case w of wild { GHC.Types.I# x ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<=# x 0) of wild1 {
+                       GHC.Types.False
+                       -> case w1 of wild2 {
+                            [] -> GramLab.Data.StringLike.$fStringLike[]a1 @ a
+                            : ipv ipv1
+                            -> case x of ds1 {
+                                 DEFAULT
+                                 -> let {
+                                      ds2 :: ([a], [a])
+                                      = case GHC.List.splitAt_$s$wsplitAt'
+                                               @ a
+                                               (GHC.Prim.-# ds1 1)
+                                               ipv1 of ww { (#,#) ww1 ww2 ->
+                                        (ww1, ww2) }
+                                    } in
+                                    (GHC.Types.:
+                                       @ a
+                                       ipv
+                                       (case ds2 of wild3 { (,) xs' xs'' -> xs' }),
+                                     case ds2 of wild3 { (,) xs' xs'' -> xs'' })
+                                 1 -> (GHC.Types.: @ a ipv (GHC.Types.[] @ a), ipv1) } }
+                       GHC.Types.True -> (GHC.Types.[] @ a, w1) } }
+                 } in
+                 (# case ds of wild { (,) w' w'' -> w' },
+                    case ds of wild { (,) w' w'' -> w'' } #)) -}
+f9418f42d40b133d33daddffc0286031
+  $w$ctoString ::
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Addr#
+                   ww1 :: GHC.ForeignPtr.ForeignPtrContents
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.Int# ->
+                 Codec.Binary.UTF8.String.decode
+                   (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                      ww
+                      ww1
+                      ww2
+                      ww3
+                      (GHC.Types.[] @ GHC.Word.Word8))) -}
+4c0be1913763cc946df963c73eab531a
+  $w$cuncons ::
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Base.Maybe
+         (GHC.Types.Char, Data.ByteString.Internal.ByteString)
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Prim.Addr#
+                   ww1 :: GHC.ForeignPtr.ForeignPtrContents
+                   ww2 :: GHC.Prim.Int#
+                   ww3 :: GHC.Prim.Int# ->
+                 case Codec.Binary.UTF8.String.decode
+                        (Data.ByteString.Internal.$wunpackAppendBytesLazy
+                           ww
+                           ww1
+                           ww2
+                           ww3
+                           (GHC.Types.[] @ GHC.Word.Word8)) of wild {
+                   []
+                   -> GHC.Base.Nothing
+                        @ (GHC.Types.Char, Data.ByteString.Internal.ByteString)
+                   : x xs
+                   -> GHC.Base.Just
+                        @ (GHC.Types.Char, Data.ByteString.Internal.ByteString)
+                        (x,
+                         GramLab.Data.StringLike.$fStringLikeByteStringChar0_$cfromString
+                           xs) }) -}
+650bfdae15e3c7e3293c07b07cd81f62
+  class StringLike seq a | seq -> a where
+    toString :: seq -> [a]
+    fromString :: [a] -> seq
+    length {- Has default method -} :: seq -> GHC.Types.Int
+    null {- Has default method -} :: seq -> GHC.Types.Bool
+    tail {- Has default method -} :: seq -> seq
+    init {- Has default method -} :: seq -> seq
+    tails {- Has default method -} :: seq -> [seq]
+    inits {- Has default method -} :: seq -> [seq]
+    splitAt {- Has default method -} ::
+      GHC.Types.Int -> seq -> (seq, seq)
+    reverse {- Has default method -} :: seq -> seq
+    append {- Has default method -} :: seq -> seq -> seq
+    cons {- Has default method -} :: a -> seq -> seq
+    uncons {- Has default method -} :: seq -> GHC.Base.Maybe (a, seq)
+    map {- Has default method -} :: (a -> a) -> seq -> seq
+instance GramLab.Data.StringLike.StringLike [Data.ByteString.Lazy.Internal.ByteString,
+                                             GHC.Types.Char]
+  = GramLab.Data.StringLike.$fStringLikeByteStringChar
+instance GramLab.Data.StringLike.StringLike [Data.ByteString.Internal.ByteString,
+                                             GHC.Types.Char]
+  = GramLab.Data.StringLike.$fStringLikeByteStringChar0
+instance GramLab.Data.StringLike.StringLike [[], .]
+  = GramLab.Data.StringLike.$fStringLike[]a
+"SC:go0" [ALWAYS] forall sc :: GHC.Types.Char
+                         sc1 :: [GHC.Types.Char]
+  GramLab.Data.StringLike.$fStringLikeByteStringChar_go (GHC.Types.:
+                                                           @ GHC.Types.Char
+                                                           sc
+                                                           sc1)
+  = GramLab.Data.StringLike.$fStringLikeByteStringChar_$sgo sc sc1
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

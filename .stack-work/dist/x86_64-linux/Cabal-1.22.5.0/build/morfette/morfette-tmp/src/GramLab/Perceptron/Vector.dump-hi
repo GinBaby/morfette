@@ -1,0 +1,794 @@
+
+==================== FINAL INTERFACE ====================
+2016-08-31 18:03:48.544985 UTC
+
+interface main@main:GramLab.Perceptron.Vector 7103
+  interface hash: f8734a2a0888e46e93089d024bf88432
+  ABI hash: 6d1c9e1c026740cc2fec146213efb657
+  export-list hash: 3e73c2d87a04b55d34dfdcd85ca67166
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 000c65bbaedf6736cafd71026f3d9081
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  GramLab.Perceptron.Vector.dot
+  GramLab.Perceptron.Vector.dot'
+  GramLab.Perceptron.Vector.for_
+  GramLab.Perceptron.Vector.plus_
+  GramLab.Perceptron.Vector.scale
+  GramLab.Perceptron.Vector.unsafeDot
+  GramLab.Perceptron.Vector.DenseVector
+  GramLab.Perceptron.Vector.DenseVectorST
+  GramLab.Perceptron.Vector.SparseVector
+module dependencies:
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0 ghc-prim-0.4.0.0 integer-gmp-1.0.0.0
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array.Base a0576aaf9a801948417a257cfc0c6084
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array.ST d88c6a5ffc4a285f6725848851e6e1b3
+import  -/  array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA:Data.Array.Unboxed babdfa1e5227a34735952147a45b17f7
+import  -/  base-4.8.2.0:Control.Monad.ST 65e1a876a6fbc0923608cbfe8fcfe7e6
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.STRef 9ae8268474b447f47ebff37df24e8349
+import  -/  base-4.8.2.0:GHC.Arr 70f35e6bfbc61995e045edb612354887
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:GHC.ST cebc788374fb85d3b05c02529a08e594
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+f7ad7b3ae1e61f86590c902ea7e45450
+  $wa ::
+    GramLab.Perceptron.Vector.DenseVectorST
+      s (GHC.Types.Int, GHC.Types.Int)
+    -> [(GHC.Types.Int, GHC.Types.Float)]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, () #)
+  {- Arity: 4,
+     Strictness: <L,U(U(U(U),U(U)),U(U(U),U(U)),U,U)><S,1*U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ s
+                   w :: GramLab.Perceptron.Vector.DenseVectorST
+                          s (GHC.Types.Int, GHC.Types.Int)
+                   ww :: [(GHC.Types.Int, GHC.Types.Float)]
+                   ww1 :: GHC.Prim.Int#
+                   w1 :: GHC.Prim.State# s[OneShot] ->
+                 case ww of wild {
+                   [] -> (# w1, GHC.Tuple.() #)
+                   : y ys
+                   -> case y of wild1 { (,) i vi ->
+                      case i of i1 { GHC.Types.I# ipv ->
+                      case vi of vi1 { GHC.Types.F# ipv1 ->
+                      case w of wild2 { Data.Array.Base.STUArray l u dt ds1 ->
+                      case l of wild3 { (,) l1 l2 ->
+                      case u of wild4 { (,) u1 u2 ->
+                      case l1 of wild5 { GHC.Types.I# m ->
+                      case u1 of wild6 { GHC.Types.I# n ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<=# m ww1) of wild7 {
+                        GHC.Types.False
+                        -> case GHC.Arr.hopelessIndexError
+                           ret_ty (# GHC.Prim.State# s, () #)
+                           of {}
+                        GHC.Types.True
+                        -> case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# ww1 n) of wild8 {
+                             GHC.Types.False
+                             -> case GHC.Arr.hopelessIndexError
+                                ret_ty (# GHC.Prim.State# s, () #)
+                                of {}
+                             GHC.Types.True
+                             -> case l2 of wild9 { GHC.Types.I# m1 ->
+                                case u2 of wild10 { GHC.Types.I# n1 ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<=# m1 ipv) of wild11 {
+                                  GHC.Types.False
+                                  -> case GHC.Arr.hopelessIndexError
+                                     ret_ty (# GHC.Prim.State# s, () #)
+                                     of {}
+                                  GHC.Types.True
+                                  -> case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.<=# ipv n1) of wild12 {
+                                       GHC.Types.False
+                                       -> case GHC.Arr.hopelessIndexError
+                                          ret_ty (# GHC.Prim.State# s, () #)
+                                          of {}
+                                       GHC.Types.True
+                                       -> let {
+                                            y1 :: GHC.Prim.Int#
+                                            = GHC.Prim.+#
+                                                (GHC.Prim.*#
+                                                   (GHC.Prim.-# ww1 m)
+                                                   (GHC.Prim.+# (GHC.Prim.-# n1 m1) 1))
+                                                (GHC.Prim.-# ipv m1)
+                                          } in
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.<=# 0 y1) of wild13 {
+                                            GHC.Types.False
+                                            -> case GramLab.Perceptron.Vector.plus_2 y1 dt
+                                               ret_ty (# GHC.Prim.State# s, () #)
+                                               of {}
+                                            GHC.Types.True
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<# y1 dt) of wild14 {
+                                                 GHC.Types.False
+                                                 -> case GramLab.Perceptron.Vector.plus_2 y1 dt
+                                                    ret_ty (# GHC.Prim.State# s, () #)
+                                                    of {}
+                                                 GHC.Types.True
+                                                 -> case GHC.Prim.readFloatArray#
+                                                           @ s
+                                                           ds1
+                                                           y1
+                                                           w1 of ds4 { (#,#) ipv2 ipv3 ->
+                                                    case GHC.Prim.writeFloatArray#
+                                                           @ s
+                                                           ds1
+                                                           y1
+                                                           (GHC.Prim.plusFloat# ipv3 ipv1)
+                                                           ipv2 of s2# { DEFAULT ->
+                                                    letrec {
+                                                      a :: [(GHC.Types.Int, GHC.Types.Float)]
+                                                           -> GHC.Prim.State# s
+                                                           -> (# GHC.Prim.State# s, () #)
+                                                        {- Arity: 2, Strictness: <S,1*U><L,U> -}
+                                                      = \ ds :: [(GHC.Types.Int, GHC.Types.Float)]
+                                                          eta :: GHC.Prim.State# s[OneShot] ->
+                                                        case ds of wild15 {
+                                                          [] -> (# eta, GHC.Tuple.() #)
+                                                          : y2 ys1
+                                                          -> case y2 of wild16 { (,) i2 vi2 ->
+                                                             case i2 of i3 { GHC.Types.I# ipv4 ->
+                                                             case vi2 of vi3 { GHC.Types.F# ipv5 ->
+                                                             case GHC.Prim.tagToEnum#
+                                                                    @ GHC.Types.Bool
+                                                                    (GHC.Prim.<=# m ww1) of wild17 {
+                                                               GHC.Types.False
+                                                               -> case GHC.Arr.hopelessIndexError
+                                                                  ret_ty (# GHC.Prim.State# s, () #)
+                                                                  of {}
+                                                               GHC.Types.True
+                                                               -> case GHC.Prim.tagToEnum#
+                                                                         @ GHC.Types.Bool
+                                                                         (GHC.Prim.<=#
+                                                                            ww1
+                                                                            n) of wild18 {
+                                                                    GHC.Types.False
+                                                                    -> case GHC.Arr.hopelessIndexError
+                                                                       ret_ty (# GHC.Prim.State# s,
+                                                                                 () #)
+                                                                       of {}
+                                                                    GHC.Types.True
+                                                                    -> case GHC.Prim.tagToEnum#
+                                                                              @ GHC.Types.Bool
+                                                                              (GHC.Prim.<=#
+                                                                                 m1
+                                                                                 ipv4) of wild19 {
+                                                                         GHC.Types.False
+                                                                         -> case GHC.Arr.hopelessIndexError
+                                                                            ret_ty (# GHC.Prim.State#
+                                                                                        s,
+                                                                                      () #)
+                                                                            of {}
+                                                                         GHC.Types.True
+                                                                         -> case GHC.Prim.tagToEnum#
+                                                                                   @ GHC.Types.Bool
+                                                                                   (GHC.Prim.<=#
+                                                                                      ipv4
+                                                                                      n1) of wild20 {
+                                                                              GHC.Types.False
+                                                                              -> case GHC.Arr.hopelessIndexError
+                                                                                 ret_ty (# GHC.Prim.State#
+                                                                                             s,
+                                                                                           () #)
+                                                                                 of {}
+                                                                              GHC.Types.True
+                                                                              -> let {
+                                                                                   y3 :: GHC.Prim.Int#
+                                                                                   = GHC.Prim.+#
+                                                                                       (GHC.Prim.*#
+                                                                                          (GHC.Prim.-#
+                                                                                             ww1
+                                                                                             m)
+                                                                                          (GHC.Prim.+#
+                                                                                             (GHC.Prim.-#
+                                                                                                n1
+                                                                                                m1)
+                                                                                             1))
+                                                                                       (GHC.Prim.-#
+                                                                                          ipv4
+                                                                                          m1)
+                                                                                 } in
+                                                                                 case GHC.Prim.tagToEnum#
+                                                                                        @ GHC.Types.Bool
+                                                                                        (GHC.Prim.<=#
+                                                                                           0
+                                                                                           y3) of wild21 {
+                                                                                   GHC.Types.False
+                                                                                   -> case GramLab.Perceptron.Vector.plus_2
+                                                                                             y3
+                                                                                             dt
+                                                                                      ret_ty (# GHC.Prim.State#
+                                                                                                  s,
+                                                                                                () #)
+                                                                                      of {}
+                                                                                   GHC.Types.True
+                                                                                   -> case GHC.Prim.tagToEnum#
+                                                                                             @ GHC.Types.Bool
+                                                                                             (GHC.Prim.<#
+                                                                                                y3
+                                                                                                dt) of wild22 {
+                                                                                        GHC.Types.False
+                                                                                        -> case GramLab.Perceptron.Vector.plus_2
+                                                                                                  y3
+                                                                                                  dt
+                                                                                           ret_ty (# GHC.Prim.State#
+                                                                                                       s,
+                                                                                                     () #)
+                                                                                           of {}
+                                                                                        GHC.Types.True
+                                                                                        -> case GHC.Prim.readFloatArray#
+                                                                                                  @ s
+                                                                                                  ds1
+                                                                                                  y3
+                                                                                                  eta of ds2 { (#,#) ipv6 ipv7 ->
+                                                                                           case GHC.Prim.writeFloatArray#
+                                                                                                  @ s
+                                                                                                  ds1
+                                                                                                  y3
+                                                                                                  (GHC.Prim.plusFloat#
+                                                                                                     ipv7
+                                                                                                     ipv5)
+                                                                                                  ipv6 of s2#1 { DEFAULT ->
+                                                                                           a ys1
+                                                                                             s2#1 } } } } } } } } } } } }
+                                                    } in
+                                                    a ys
+                                                      s2# } } } } } } } } } } } } } } } } } } }) -}
+312994f47e4cd21e81bd1c2c380aa164
+  $wa1 ::
+    GHC.Arr.Ix (y, i) =>
+    GramLab.Perceptron.Vector.DenseVectorST s (y, i)
+    -> [(i, GHC.Types.Float)]
+    -> y
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, () #)
+  {- Arity: 5,
+     Strictness: <L,U(A,A,C(C1(U(U))),A,A,A,A)><L,U(U,U,U,U)><S,1*U><S,1*U><L,U>,
+     Inline: [0] -}
+247f559fc3eb85a93fb49aa082c3162d
+  type DenseVector i = Data.Array.Base.UArray i GHC.Types.Float
+26e3d527d0d13873a16bf07a4772b34f
+  type DenseVectorST s i =
+    Data.Array.Base.STUArray s i GHC.Types.Float
+ec7e5c0b156f27ec71d8610c6212d14b
+  type SparseVector y i = ([(i, GHC.Types.Float)], y)
+ccd2dca4980d7557c125f66d024397ef
+  dot ::
+    (GHC.Arr.Ix (y, i), GHC.Arr.Ix i, GHC.Arr.Ix y) =>
+    GramLab.Perceptron.Vector.DenseVector (y, i)
+    -> ([(i, GHC.Types.Float)], y) -> GHC.Types.Float
+  {- Arity: 5,
+     Strictness: <L,A><L,U(A,A,A,C(C1(U(U))),C(C1(U)),A,C(U(U)))><L,U(A,A,A,C(C1(U(U))),C(C1(U)),A,A)><L,U(U(U,U),U(U,U),U,U)><S(SS),1*U(1*U,1*U)>m,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (5, False, False)
+                (\ @ y
+                   @ i
+                   $dIx :: GHC.Arr.Ix (y, i)
+                   $dIx1 :: GHC.Arr.Ix i
+                   $dIx2 :: GHC.Arr.Ix y
+                   eta :: GramLab.Perceptron.Vector.DenseVector (y, i)
+                   eta1 :: ([(i, GHC.Types.Float)], y) ->
+                 case eta1 of wild { (,) x y1 ->
+                 case y1 of y2 { DEFAULT ->
+                 letrec {
+                   go :: GHC.Types.Float -> [(i, GHC.Types.Float)] -> GHC.Types.Float
+                     {- Arity: 2 -}
+                   = \ s :: GHC.Types.Float ds :: [(i, GHC.Types.Float)] ->
+                     case s of s1 { GHC.Types.F# ipv ->
+                     case ds of wild1 {
+                       [] -> s1
+                       : ds1 x1
+                       -> case ds1 of wild2 { (,) i1 xi ->
+                          case i1 of i2 { DEFAULT ->
+                          case xi of xi1 { GHC.Types.F# ipv1 ->
+                          go
+                            (case eta of wild3 { Data.Array.Base.UArray l u dt ds2 ->
+                             GHC.Float.$fNumFloat_$c+
+                               s1
+                               (GHC.Float.$fNumFloat_$c*
+                                  (GHC.Base.$
+                                     @ GHC.Types.Int
+                                     @ GHC.Types.Float
+                                     (\ ds3 :: GHC.Types.Int ->
+                                      case ds3 of wild4 { GHC.Types.I# i# ->
+                                      case GHC.Prim.indexFloatArray# ds2 i# of wild5 { DEFAULT ->
+                                      GHC.Types.F# wild5 } })
+                                     (case l of wild4 { (,) l1 l2 ->
+                                      case u of wild5 { (,) u1 u2 ->
+                                      case GHC.Classes.&&
+                                             (GHC.Arr.inRange @ y $dIx2 (l1, u1) y2)
+                                             (GHC.Arr.inRange @ i $dIx1 (l2, u2) i2) of wild6 {
+                                        GHC.Types.False -> GHC.Arr.hopelessIndexError
+                                        GHC.Types.True
+                                        -> case GHC.Num.$fNumInt_$c+
+                                                  (GHC.Num.$fNumInt_$c*
+                                                     (GHC.Arr.unsafeIndex @ y $dIx2 (l1, u1) y2)
+                                                     (GHC.Arr.unsafeRangeSize @ i $dIx1 (l2, u2)))
+                                                  (GHC.Arr.unsafeIndex
+                                                     @ i
+                                                     $dIx1
+                                                     (l2, u2)
+                                                     i2) of wild7 { GHC.Types.I# y3 ->
+                                           case GHC.Classes.&&
+                                                  (GHC.Prim.tagToEnum#
+                                                     @ GHC.Types.Bool
+                                                     (GHC.Prim.<=# 0 y3))
+                                                  (GHC.Prim.tagToEnum#
+                                                     @ GHC.Types.Bool
+                                                     (GHC.Prim.<# y3 dt)) of wild8 {
+                                             GHC.Types.False
+                                             -> GHC.Err.error
+                                                  @ GHC.Types.Int
+                                                  (GHC.Base.build
+                                                     @ GHC.Types.Char
+                                                     (\ @ b
+                                                        c :: GHC.Types.Char -> b -> b[OneShot]
+                                                        n1 :: b[OneShot] ->
+                                                      GHC.CString.unpackFoldrCString#
+                                                        @ b
+                                                        "Error in array index; "#
+                                                        c
+                                                        (GHC.Base.foldr
+                                                           @ GHC.Types.Char
+                                                           @ b
+                                                           c
+                                                           (GHC.CString.unpackFoldrCString#
+                                                              @ b
+                                                              " not in range [0.."#
+                                                              c
+                                                              (GHC.Base.foldr
+                                                                 @ GHC.Types.Char
+                                                                 @ b
+                                                                 c
+                                                                 (GHC.CString.unpackFoldrCString#
+                                                                    @ b
+                                                                    ")"#
+                                                                    c
+                                                                    n1)
+                                                                 (GHC.Show.$fShowInt_$cshow
+                                                                    (GHC.Types.I# dt))))
+                                                           (GHC.Show.$fShowInt_$cshow wild7))))
+                                             GHC.Types.True -> wild7 } } } } }))
+                                  xi1) })
+                            x1 } } } } }
+                 } in
+                 go (GHC.Types.F# __float 0.0) x } }) -}
+cf4e1a338b118b7086c98db751415ee8
+  dot' ::
+    (GHC.Types.Float,
+     GramLab.Perceptron.Vector.DenseVector
+       (GHC.Types.Int, GHC.Types.Int),
+     GramLab.Perceptron.Vector.DenseVector
+       (GHC.Types.Int, GHC.Types.Int))
+    -> ([(GHC.Types.Int, GHC.Types.Float)], GHC.Types.Int)
+    -> GHC.Types.Float
+  {- Arity: 2,
+     Strictness: <S(SLL),1*U(1*U(U),U(U(U(U),U(U)),U(U(U),U(U)),U,U),U(U(U(U),U(U)),U(U(U),U(U)),U,U))><S(SS),1*U(1*U,1*U(U))>m,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ ds :: (GHC.Types.Float,
+                          GramLab.Perceptron.Vector.DenseVector
+                            (GHC.Types.Int, GHC.Types.Int),
+                          GramLab.Perceptron.Vector.DenseVector
+                            (GHC.Types.Int, GHC.Types.Int))
+                   ds1 :: ([(GHC.Types.Int, GHC.Types.Float)], GHC.Types.Int) ->
+                 case ds of wild { (,,) c params params_a ->
+                 case c of c1 { GHC.Types.F# ipv ->
+                 case ds1 of wild1 { (,) x y ->
+                 case y of y1 { GHC.Types.I# ipv1 ->
+                 letrec {
+                   go :: GHC.Types.Float
+                         -> [(GHC.Types.Int, GHC.Types.Float)] -> GHC.Types.Float
+                     {- Arity: 2 -}
+                   = \ s :: GHC.Types.Float
+                       ds2 :: [(GHC.Types.Int, GHC.Types.Float)] ->
+                     case s of s1 { GHC.Types.F# ipv2 ->
+                     case ds2 of wild2 {
+                       [] -> s1
+                       : ds3 x1
+                       -> case ds3 of wild3 { (,) i xi ->
+                          case i of i1 { GHC.Types.I# ipv3 ->
+                          case xi of xi1 { GHC.Types.F# ipv4 ->
+                          go
+                            (case params of wild4 { Data.Array.Base.UArray l u dt ds4 ->
+                             case params_a of wild5 { Data.Array.Base.UArray l1 u1 dt1 ds5 ->
+                             GHC.Float.$fNumFloat_$c+
+                               s1
+                               (GHC.Float.$fNumFloat_$c*
+                                  (GHC.Float.$fNumFloat_$c-
+                                     (GHC.Base.$
+                                        @ GHC.Types.Int
+                                        @ GHC.Types.Float
+                                        (\ ds6 :: GHC.Types.Int ->
+                                         case ds6 of wild6 { GHC.Types.I# i# ->
+                                         case GHC.Prim.indexFloatArray# ds4 i# of wild7 { DEFAULT ->
+                                         GHC.Types.F# wild7 } })
+                                        (case l of wild6 { (,) l2 l3 ->
+                                         case u of wild7 { (,) u2 u3 ->
+                                         case l2 of wild8 { GHC.Types.I# m ->
+                                         case u2 of wild9 { GHC.Types.I# n ->
+                                         case GHC.Classes.&&
+                                                (GHC.Classes.&&
+                                                   (GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=# m ipv1))
+                                                   (GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=# ipv1 n)))
+                                                (case l3 of wild10 { GHC.Types.I# m1 ->
+                                                 case u3 of wild11 { GHC.Types.I# n1 ->
+                                                 GHC.Classes.&&
+                                                   (GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=# m1 ipv3))
+                                                   (GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<=# ipv3 n1)) } }) of wild10 {
+                                           GHC.Types.False -> GHC.Arr.hopelessIndexError
+                                           GHC.Types.True
+                                           -> case GHC.Num.$fNumInt_$c+
+                                                     (GHC.Num.$fNumInt_$c*
+                                                        (GHC.Num.$fNumInt_$c- y1 wild8)
+                                                        (GHC.Arr.$fIx(,)_$cunsafeRangeSize
+                                                           (l3, u3)))
+                                                     (GHC.Num.$fNumInt_$c-
+                                                        i1
+                                                        l3) of wild11 { GHC.Types.I# y2 ->
+                                              case GHC.Classes.&&
+                                                     (GHC.Prim.tagToEnum#
+                                                        @ GHC.Types.Bool
+                                                        (GHC.Prim.<=# 0 y2))
+                                                     (GHC.Prim.tagToEnum#
+                                                        @ GHC.Types.Bool
+                                                        (GHC.Prim.<# y2 dt)) of wild12 {
+                                                GHC.Types.False
+                                                -> GHC.Err.error
+                                                     @ GHC.Types.Int
+                                                     (GHC.Base.build
+                                                        @ GHC.Types.Char
+                                                        (\ @ b
+                                                           c2 :: GHC.Types.Char -> b -> b[OneShot]
+                                                           n1 :: b[OneShot] ->
+                                                         GHC.CString.unpackFoldrCString#
+                                                           @ b
+                                                           "Error in array index; "#
+                                                           c2
+                                                           (GHC.Base.foldr
+                                                              @ GHC.Types.Char
+                                                              @ b
+                                                              c2
+                                                              (GHC.CString.unpackFoldrCString#
+                                                                 @ b
+                                                                 " not in range [0.."#
+                                                                 c2
+                                                                 (GHC.Base.foldr
+                                                                    @ GHC.Types.Char
+                                                                    @ b
+                                                                    c2
+                                                                    (GHC.CString.unpackFoldrCString#
+                                                                       @ b
+                                                                       ")"#
+                                                                       c2
+                                                                       n1)
+                                                                    (GHC.Show.$fShowInt_$cshow
+                                                                       (GHC.Types.I# dt))))
+                                                              (GHC.Show.$fShowInt_$cshow wild11))))
+                                                GHC.Types.True -> wild11 } } } } } } }))
+                                     (GHC.Float.$fNumFloat_$c*
+                                        (GHC.Base.$
+                                           @ GHC.Types.Int
+                                           @ GHC.Types.Float
+                                           (\ ds6 :: GHC.Types.Int ->
+                                            case ds6 of wild6 { GHC.Types.I# i# ->
+                                            case GHC.Prim.indexFloatArray#
+                                                   ds5
+                                                   i# of wild7 { DEFAULT ->
+                                            GHC.Types.F# wild7 } })
+                                           (case l1 of wild6 { (,) l2 l3 ->
+                                            case u1 of wild7 { (,) u2 u3 ->
+                                            case l2 of wild8 { GHC.Types.I# m ->
+                                            case u2 of wild9 { GHC.Types.I# n ->
+                                            case GHC.Classes.&&
+                                                   (GHC.Classes.&&
+                                                      (GHC.Prim.tagToEnum#
+                                                         @ GHC.Types.Bool
+                                                         (GHC.Prim.<=# m ipv1))
+                                                      (GHC.Prim.tagToEnum#
+                                                         @ GHC.Types.Bool
+                                                         (GHC.Prim.<=# ipv1 n)))
+                                                   (case l3 of wild10 { GHC.Types.I# m1 ->
+                                                    case u3 of wild11 { GHC.Types.I# n1 ->
+                                                    GHC.Classes.&&
+                                                      (GHC.Prim.tagToEnum#
+                                                         @ GHC.Types.Bool
+                                                         (GHC.Prim.<=# m1 ipv3))
+                                                      (GHC.Prim.tagToEnum#
+                                                         @ GHC.Types.Bool
+                                                         (GHC.Prim.<=# ipv3 n1)) } }) of wild10 {
+                                              GHC.Types.False -> GHC.Arr.hopelessIndexError
+                                              GHC.Types.True
+                                              -> case GHC.Num.$fNumInt_$c+
+                                                        (GHC.Num.$fNumInt_$c*
+                                                           (GHC.Num.$fNumInt_$c- y1 wild8)
+                                                           (GHC.Arr.$fIx(,)_$cunsafeRangeSize
+                                                              (l3, u3)))
+                                                        (GHC.Num.$fNumInt_$c-
+                                                           i1
+                                                           l3) of wild11 { GHC.Types.I# y2 ->
+                                                 case GHC.Classes.&&
+                                                        (GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.<=# 0 y2))
+                                                        (GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.<# y2 dt1)) of wild12 {
+                                                   GHC.Types.False
+                                                   -> GHC.Err.error
+                                                        @ GHC.Types.Int
+                                                        (GHC.Base.build
+                                                           @ GHC.Types.Char
+                                                           (\ @ b
+                                                              c2 :: GHC.Types.Char
+                                                                    -> b -> b[OneShot]
+                                                              n1 :: b[OneShot] ->
+                                                            GHC.CString.unpackFoldrCString#
+                                                              @ b
+                                                              "Error in array index; "#
+                                                              c2
+                                                              (GHC.Base.foldr
+                                                                 @ GHC.Types.Char
+                                                                 @ b
+                                                                 c2
+                                                                 (GHC.CString.unpackFoldrCString#
+                                                                    @ b
+                                                                    " not in range [0.."#
+                                                                    c2
+                                                                    (GHC.Base.foldr
+                                                                       @ GHC.Types.Char
+                                                                       @ b
+                                                                       c2
+                                                                       (GHC.CString.unpackFoldrCString#
+                                                                          @ b
+                                                                          ")"#
+                                                                          c2
+                                                                          n1)
+                                                                       (GHC.Show.$fShowInt_$cshow
+                                                                          (GHC.Types.I# dt1))))
+                                                                 (GHC.Show.$fShowInt_$cshow
+                                                                    wild11))))
+                                                   GHC.Types.True -> wild11 } } } } } } }))
+                                        (GHC.Float.$fFractionalFloat_$c/
+                                           (GHC.Types.F# __float 1.0)
+                                           c1)))
+                                  xi1) } })
+                            x1 } } } } }
+                 } in
+                 go (GHC.Types.F# __float 0.0) x } } } }) -}
+728e93a2565a7092e0131c34977ae395
+  for_ ::
+    (GHC.Base.Monad m, Data.Foldable.Foldable t) =>
+    t a -> (a -> m b) -> m ()
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,U(A,A,U,C(U),A)><S(LLC(C(S))LLLLLLLLLLLLL),1*U(A,A,1*C1(C1(U)),A,A,A,A,A,A,A,A,A,A,A,A,A)><L,U><L,C(U)>,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (4, False, True)
+                (\ @ a
+                   @ (m :: * -> *)
+                   @ b
+                   @ (t :: * -> *)
+                   $dMonad :: GHC.Base.Monad m
+                   $dFoldable :: Data.Foldable.Foldable t
+                   xs :: t a
+                   f :: a -> m b ->
+                 Data.Foldable.mapM_ @ a @ m @ b @ t $dFoldable $dMonad f xs) -}
+cf1ee85655eb21a4517741a59c984c4e
+  plus_ ::
+    (GHC.Show.Show (y, i), GHC.Arr.Ix (y, i)) =>
+    GramLab.Perceptron.Vector.DenseVectorST s (y, i)
+    -> GramLab.Perceptron.Vector.SparseVector y i -> GHC.ST.ST s ()
+  {- Arity: 5,
+     Strictness: <L,A><L,U(A,A,C(C1(U(U))),A,A,A,A)><L,U(U,U,U,U)><S(SS),1*U(1*U,1*U)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                GramLab.Perceptron.Vector.plus_3
+                  `cast`
+                (forall s y i.
+                 <GHC.Show.Show (y, i)>_R
+                 ->_R <GHC.Arr.Ix (y, i)>_R
+                 ->_R <GramLab.Perceptron.Vector.DenseVectorST s (y, i)>_R
+                 ->_R <([(i, GHC.Types.Float)], y)>_R
+                 ->_R Sym (GHC.ST.NTCo:ST[0] <s>_N <()>_R)) -}
+3651c800783621a0c318e2adf4e79ed0
+  plus_1 ::
+    GramLab.Perceptron.Vector.DenseVectorST
+      s (GHC.Types.Int, GHC.Types.Int)
+    -> ([(GHC.Types.Int, GHC.Types.Float)], GHC.Types.Int)
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, () #)
+  {- Arity: 3,
+     Strictness: <L,U(U(U(U),U(U)),U(U(U),U(U)),U,U)><S(SS),1*U(1*U,1*U(U))><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ s
+                   w :: GramLab.Perceptron.Vector.DenseVectorST
+                          s (GHC.Types.Int, GHC.Types.Int)
+                   w1 :: ([(GHC.Types.Int, GHC.Types.Float)], GHC.Types.Int)
+                   w2 :: GHC.Prim.State# s[OneShot] ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 GramLab.Perceptron.Vector.$wa @ s w ww1 ww4 w2 } }) -}
+c2ef73197093b39597cccf5ac15ac0e0
+  plus_2 :: GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Types.Int
+  {- Arity: 2, Strictness: <L,U><L,U>b -}
+4524f8db4846c36a05802f92389a6d01
+  plus_3 ::
+    (GHC.Show.Show (y, i), GHC.Arr.Ix (y, i)) =>
+    GramLab.Perceptron.Vector.DenseVectorST s (y, i)
+    -> ([(i, GHC.Types.Float)], y)
+    -> GHC.Prim.State# s
+    -> (# GHC.Prim.State# s, () #)
+  {- Arity: 5,
+     Strictness: <L,A><L,U(A,A,C(C1(U(U))),A,A,A,A)><L,U(U,U,U,U)><S(SS),1*U(1*U,1*U)><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (5, True, False)
+                (\ @ s
+                   @ y
+                   @ i
+                   w :: GHC.Show.Show (y, i)
+                   w1 :: GHC.Arr.Ix (y, i)
+                   w2 :: GramLab.Perceptron.Vector.DenseVectorST s (y, i)
+                   w3 :: ([(i, GHC.Types.Float)], y)
+                   w4 :: GHC.Prim.State# s[OneShot] ->
+                 case w3 of ww { (,) ww1 ww2 ->
+                 GramLab.Perceptron.Vector.$wa1 @ s @ y @ i w1 w2 ww1 ww2 w4 }) -}
+f39be7c436559424e21c374bd097f5ec
+  plus__$splus_ ::
+    GramLab.Perceptron.Vector.DenseVectorST
+      s (GHC.Types.Int, GHC.Types.Int)
+    -> GramLab.Perceptron.Vector.SparseVector
+         GHC.Types.Int GHC.Types.Int
+    -> GHC.ST.ST s ()
+  {- Arity: 3,
+     Strictness: <L,U(U(U(U),U(U)),U(U(U),U(U)),U,U)><S(SS),1*U(1*U,1*U(U))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                GramLab.Perceptron.Vector.plus_1
+                  `cast`
+                (forall s.
+                 <GramLab.Perceptron.Vector.DenseVectorST
+                    s (GHC.Types.Int, GHC.Types.Int)>_R
+                 ->_R <([(GHC.Types.Int, GHC.Types.Float)], GHC.Types.Int)>_R
+                 ->_R Sym (GHC.ST.NTCo:ST[0] <s>_N <()>_R)) -}
+09ded5d39f1eb0bbdb374a8f59a4efcc
+  scale ::
+    GHC.Arr.Ix i =>
+    GramLab.Perceptron.Vector.SparseVector y i
+    -> GHC.Types.Float -> GramLab.Perceptron.Vector.SparseVector y i
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><S,1*U(1*U,U)><L,U(U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ y
+                   @ i
+                   w :: GHC.Arr.Ix i
+                   w1 :: GramLab.Perceptron.Vector.SparseVector y i
+                   w2 :: GHC.Types.Float ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 (GHC.Base.map
+                    @ (i, GHC.Types.Float)
+                    @ (i, GHC.Types.Float)
+                    (\ ds :: (i, GHC.Types.Float) ->
+                     case ds of wild { (,) i1 vi -> (i1, GHC.Float.timesFloat vi w2) })
+                    ww1,
+                  ww2) }) -}
+bfc929baccd164ff1e529f744925e31a
+  scale_$sscale ::
+    GramLab.Perceptron.Vector.SparseVector GHC.Types.Int GHC.Types.Int
+    -> GHC.Types.Float
+    -> GramLab.Perceptron.Vector.SparseVector
+         GHC.Types.Int GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(1*U,U)><L,U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GramLab.Perceptron.Vector.SparseVector
+                          GHC.Types.Int GHC.Types.Int
+                   w1 :: GHC.Types.Float ->
+                 case w of ww { (,) ww1 ww2 ->
+                 (GHC.Base.map
+                    @ (GHC.Types.Int, GHC.Types.Float)
+                    @ (GHC.Types.Int, GHC.Types.Float)
+                    (\ ds :: (GHC.Types.Int, GHC.Types.Float) ->
+                     case ds of wild { (,) i vi -> (i, GHC.Float.timesFloat vi w1) })
+                    ww1,
+                  ww2) }) -}
+aee50b79039723b8483dee21ed8bfbf4
+  unsafeDot ::
+    (GHC.Arr.Ix (y, i), GHC.Arr.Ix i, GHC.Arr.Ix y) =>
+    GramLab.Perceptron.Vector.DenseVector (y, i)
+    -> ([(i, GHC.Types.Float)], y) -> GHC.Types.Float
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,A><L,U(A,A,A,C(C1(U(U))),A,A,C(U(U)))><L,U(A,A,A,C(C1(U(U))),A,A,A)><L,U(U(U,U),U(U,U),A,U)><S(SS),1*U(1*U,1*U)>m,
+     Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (5, False, False)
+                (\ @ y
+                   @ i
+                   $dIx :: GHC.Arr.Ix (y, i)
+                   $dIx1 :: GHC.Arr.Ix i
+                   $dIx2 :: GHC.Arr.Ix y
+                   eta :: GramLab.Perceptron.Vector.DenseVector (y, i)
+                   eta1 :: ([(i, GHC.Types.Float)], y) ->
+                 case eta1 of wild { (,) x y1 ->
+                 case y1 of y2 { DEFAULT ->
+                 letrec {
+                   go :: GHC.Types.Float -> [(i, GHC.Types.Float)] -> GHC.Types.Float
+                     {- Arity: 2 -}
+                   = \ s :: GHC.Types.Float ds :: [(i, GHC.Types.Float)] ->
+                     case s of s1 { GHC.Types.F# ipv ->
+                     case ds of wild1 {
+                       [] -> s1
+                       : ds1 x1
+                       -> case ds1 of wild2 { (,) i1 xi ->
+                          case i1 of i2 { DEFAULT ->
+                          case xi of xi1 { GHC.Types.F# ipv1 ->
+                          go
+                            (case eta of wild3 { Data.Array.Base.UArray ds2 ds3 dt arr# ->
+                             case ds2 of wild4 { (,) l1 l2 ->
+                             case ds3 of wild5 { (,) u1 u2 ->
+                             case GHC.Num.$fNumInt_$c+
+                                    (GHC.Num.$fNumInt_$c*
+                                       (GHC.Arr.unsafeIndex @ y $dIx2 (l1, u1) y2)
+                                       (GHC.Arr.unsafeRangeSize @ i $dIx1 (l2, u2)))
+                                    (GHC.Arr.unsafeIndex
+                                       @ i
+                                       $dIx1
+                                       (l2, u2)
+                                       i2) of wild6 { GHC.Types.I# i# ->
+                             case GHC.Prim.indexFloatArray# arr# i# of wild7 { DEFAULT ->
+                             GHC.Float.$fNumFloat_$c+
+                               s1
+                               (GHC.Float.$fNumFloat_$c* (GHC.Types.F# wild7) xi1) } } } } })
+                            x1 } } } } }
+                 } in
+                 go (GHC.Types.F# __float 0.0) x } }) -}
+"SPEC plus_" [ALWAYS] forall @ s
+                             $dShow :: GHC.Show.Show (GHC.Types.Int, GHC.Types.Int)
+                             $dIx :: GHC.Arr.Ix (GHC.Types.Int, GHC.Types.Int)
+  GramLab.Perceptron.Vector.plus_ @ s
+                                  @ GHC.Types.Int
+                                  @ GHC.Types.Int
+                                  $dShow
+                                  $dIx
+  = GramLab.Perceptron.Vector.plus__$splus_ @ s
+"SPEC scale" [ALWAYS] forall $dIx :: GHC.Arr.Ix GHC.Types.Int
+  GramLab.Perceptron.Vector.scale @ GHC.Types.Int
+                                  @ GHC.Types.Int
+                                  $dIx
+  = GramLab.Perceptron.Vector.scale_$sscale
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
